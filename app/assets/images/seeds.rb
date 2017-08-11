@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 #---
 # Excerpted from "Agile Web Development with Rails",
 # published by The Pragmatic Bookshelf.
@@ -16,16 +9,16 @@
 #---
 # Excerpted from "Agile Web Development with Rails, 4rd Ed.",
 # published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material,
+# Copyrights apply to this code. It may not be used to create training material, 
 # courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose.
+# We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 # encoding: utf-8
 Product.delete_all
 Product.create(:title => 'Web Design for Developers',
-               :description =>
-                   %{<p>
+  :description => 
+    %{<p>
         <em>Web Design for Developers</em> will show you how to make your
         web-based application look professionally designed. We'll help you
         learn how to pick the right colors and fonts, avoid costly interface
@@ -34,23 +27,23 @@ Product.create(:title => 'Web Design for Developers',
         and work through a web site redesign, taking a new design from concept
         all the way to implementation.
       </p>},
-               :image_url =>   '/images/cs.jpg',
-               :price => 42.95)
+  :image_url =>   '/images/wd4d.jpg',    
+  :price => 42.95)
 # . . .
 Product.create(:title => 'Programming Ruby 1.9',
-               :description =>
-                   %{<p>
+  :description =>
+    %{<p>
         Ruby is the fastest growing and most exciting dynamic language
         out there. If you need to get working programs delivered fast,
         you should add Ruby to your toolbox.
       </p>},
-               :image_url => '/images/ruby.jpg',
-               :price => 49.50)
+  :image_url => '/images/ruby.jpg',
+  :price => 49.50)
 # . . .
 
 Product.create(:title => 'Rails Test Prescriptions',
-               :description =>
-                   %{<p>
+  :description => 
+    %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
         Rails applications, covering Test-Driven Development from both a
         theoretical perspective (why to test) and from a practical perspective
@@ -58,5 +51,5 @@ Product.create(:title => 'Rails Test Prescriptions',
         procedures for Rails 2 and Rails 3, and introduces popular add-ons,
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
       </p>},
-               :image_url => '/images/rtp.jpg',
-               :price => 43.75)
+  :image_url => '/images/rtp.jpg',
+  :price => 43.75)
