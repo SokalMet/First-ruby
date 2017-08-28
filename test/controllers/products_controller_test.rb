@@ -6,8 +6,9 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get products_url
+    get :index
     assert_response :success
+    assert_not_nill assigns(:products)
   end
 
   test "should get new" do
