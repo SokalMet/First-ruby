@@ -11,6 +11,7 @@
   <div id="banner">
     <%= image_tag("logo.png")%>
     <%= @page_title || "Pragmatic Bookshelf"%>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
   </div>
   <div id="columns">
     <div id="side">
