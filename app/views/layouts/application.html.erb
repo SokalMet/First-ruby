@@ -8,26 +8,29 @@
   </head>
 
   <body class="<%= controller.controller_name %>">
-  <div id="topMenu">
-    <%#= image_tag("logo.png")%>
-    <%= @page_title || "Sokal shop"%>
-    <%= %>
-    <%= link_to 'Logout', destroy_user_session_path, method: :delete %> <%#=https://launchschool.com/blog/how-to-use-devise-in-rails-for-authentication %>
-  </div>
-  <div id="columns">
-    <div id="side">
-      <ul>
-        <li><%= link_to "Store", store_path %></li>
-        <li><%= link_to "Products", products_path %></li>
-        <li><a href="">Questions</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a></a></li>
-      </ul>
+    <div id="topMenu">
+      <%= @page_title || "Sokal shop"%>
+      <!--https://launchschool.com/blog/how-to-use-devise-in-rails-for-authentication-->
+      <% if user_signed_in? %>
+        <%= link_to "Logout #{ current_user.email }", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Login', new_user_session_path, method: :get %>
+      <% end %>
     </div>
-    <div id="main">
-      <%= yield%>
+    <div id="columns">
+      <div id="side">
+        <ul>
+          <li><%= link_to "Store", store_path %></li>
+          <li><%= link_to "Products", products_path %></li>
+          <li><a href="">Questions</a></li>
+          <li><a href="">News</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a></a></li>
+        </ul>
+      </div>
+      <div id="main">
+        <%= yield%>
+      </div>
     </div>
-  </div>
   </body>
 </html>

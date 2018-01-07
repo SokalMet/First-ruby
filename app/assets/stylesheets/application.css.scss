@@ -14,7 +14,7 @@
  *= require_self
  */
 
-#topMenu{
+#topMenu {
   background: #CCCCCC;
   padding: 10px;
   border-bottom : 2px solid;
@@ -25,19 +25,19 @@
   img {
     float: left;
   }
-  a{
+  a {
     float: right;
     font-size: 1.5rem;
   }
 }
 
 #notice {
-    color : #000 !important;
-    border: 2px solid red;
-    padding: 1em;
-    margin-bottom: 2em;
-    background-color: #f0f0f0;
-    font : bold smaller sans-serif;
+  color : #000 !important;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font : bold smaller sans-serif;
 }
 
 #columns {
@@ -54,7 +54,7 @@
     background: #eeeeee;
     ul {
       padding: 0;
-      li{
+      li {
         list-style : none;
         a {
           text-decoration: none;
