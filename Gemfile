@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 gem 'responders', '~> 2.4'
-gem 'dalli', '~> 2.7', '>= 2.7.6'                     # Required for memcachier
+gem 'dalli', '~> 2.7', '>= 2.7.6'                       # Required for memcachier
 gem 'pg', '~> 0.21.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.9'
@@ -27,10 +27,10 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'wkhtmltopdf-binary', '~> 0.12.3.1'
-gem 'devise', '~> 4.3.0'                              # User authentication for users
-gem 'font-awesome-rails', '~> 4.7.0.2'                # http://fontawesome.io/get-started/ for icons
-gem 'newrelic_rpm', '~> 4.3', '>= 4.3.0.335'          # Gem to support new relic application monitoring
-gem 'nokogiri', '~> 1.8'                              # HTML and XML Parser
+gem 'devise', '~> 4.3.0'                                # User authentication for users
+gem 'font-awesome-rails', '~> 4.7.0.2'                  # http://fontawesome.io/get-started/ for icons
+gem 'newrelic_rpm', '~> 4.3', '>= 4.3.0.335'            # Gem to support new relic application monitoring
+gem 'nokogiri', '~> 1.8'                                # HTML and XML Parser
 
 group :production do
   gem 'font_assets', '~> 0.1.14'                        # Let Cloudfront serve web fonts OK: http://kennethjiang.blogspot.com/2014/07/set-up-cors-in-cloudfront-for-custom.html
@@ -58,7 +58,7 @@ group :development, :test do
   gem 'git-smart', '~> 0.1.10'                          # Allows "git smart-pull" for less merge messes
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'capybara', '~> 2.15', '>= 2.15.1'                # Capybara is an integration testing tool for rack based web apps
-  gem 'rails-controller-testing', '~> 1.0.2'          # Extracting `assigns` and `assert_template` from ActionDispatch.
+  gem 'rails-controller-testing', '~> 1.0.2'            # Extracting `assigns` and `assert_template` from ActionDispatch.
 end
 
 group :test do
@@ -73,7 +73,7 @@ group :test do
   gem 'timecop', '~> 0.9.1'                             # Set system time for tests
   gem 'rspec-html-matchers'                             # For testing complex html output, useful for testing forms
   gem 'mutest-rspec', '~> 0.0.7'                        # Mutation testing for ruby
-  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'        # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'          # database_cleaner is not required, but highly recommended
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
