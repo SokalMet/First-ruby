@@ -11,5 +11,10 @@
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <auth-required>false</auth-required>
     </data-source>
+    <data-source name="Rails shop: production" uuid="ee2ff620-4946-4f98-b9bf-b0b483632865">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>postgres</user-name>
+    </data-source>
   </component>
 </project>

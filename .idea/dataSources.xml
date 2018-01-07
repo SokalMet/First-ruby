@@ -8,6 +8,9 @@
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:postgresql:db/development.sqlite3</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.postgres.PostgresExplainPlanProvider</provider>
+      </explain-plan-config>
     </data-source>
     <data-source source="LOCAL" name="Rails shop: test" uuid="7ba07d29-ee5d-4f64-8fa0-ec943f8f98f9">
       <driver-ref>sqlite.xerial</driver-ref>
@@ -16,6 +19,17 @@
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:postgresql:db/test.sqlite3</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.postgres.PostgresExplainPlanProvider</provider>
+      </explain-plan-config>
+    </data-source>
+    <data-source source="LOCAL" name="Rails shop: production" uuid="ee2ff620-4946-4f98-b9bf-b0b483632865">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:first-ruby_production</jdbc-url>
     </data-source>
   </component>
 </project>
