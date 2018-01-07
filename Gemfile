@@ -58,6 +58,7 @@ group :development, :test do
   gem 'git-smart', '~> 0.1.10'                          # Allows "git smart-pull" for less merge messes
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'capybara', '~> 2.15', '>= 2.15.1'                # Capybara is an integration testing tool for rack based web apps
+  gem 'rails-controller-testing', '~> 1.0.2'          # Extracting `assigns` and `assert_template` from ActionDispatch.
 end
 
 group :test do
@@ -72,6 +73,7 @@ group :test do
   gem 'timecop', '~> 0.9.1'                             # Set system time for tests
   gem 'rspec-html-matchers'                             # For testing complex html output, useful for testing forms
   gem 'mutest-rspec', '~> 0.0.7'                        # Mutation testing for ruby
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'        # database_cleaner is not required, but highly recommended
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
