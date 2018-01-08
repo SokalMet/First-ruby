@@ -11,42 +11,86 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
+  <!--https://launchschool.com/blog/how-to-use-devise-in-rails-for-authentication-->
   <body>
-    <div id="container">
-      <div id="header">
-        <div id="topMenu">
-          <div id="title">
-            SokalShop
+    <header class="navbar-fixed-top">
+      <div class="header">
+        <nav class="navbar navbar-default navbar-inverse ">
+          <div class="container">
+            <div class="row">
+              <ul class="nav navbar-nav first-nav">
+                <li><%= link_to 'Products', products_path %></li>
+                <li><%= link_to 'Store', store_path %></li>
+                <li><a href="#">Discounts</a></li>
+                <li><a href="#">Crediting</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+              <div class="cabinet">
+                <% if user_signed_in? %>
+                  <%= link_to destroy_user_session_path, method: :delete  do %>
+                    <i class="fa fa-user" aria-hidden="true"></i> Logout | <%= current_user.email %>
+                  <% end %>
+                <% else %>
+                  <%= link_to new_user_session_path do %>
+                    <i class="fa fa-user" aria-hidden="true"></i> Sign in
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
           </div>
-          <div id="login">
-            <!--https://launchschool.com/blog/how-to-use-devise-in-rails-for-authentication-->
-            <% if user_signed_in? %>
-                <%= link_to "Logout #{ current_user.email }", destroy_user_session_path, method: :delete %>
-            <% else %>
-                <%= link_to 'Login', new_user_session_path, method: :get %>
-            <% end %>
-          </div>
-        </div>
+        </nav>
       </div>
-      <div id="columns">
-        <% if user_signed_in? %>
-          <div id="side">
-            <ul>
-              <li><%= link_to "Products", products_path %></li>
-              <li><%= link_to "Store", store_path %></li>
-              <li><a href="">Questions</a></li>
-              <li><a href="">News</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a></a></li>
-            </ul>
+      <div class="header">
+        <nav class="navbar navbar-default blue1">
+          <div class="container">
+            <div class="row">
+              <ul class="nav navbar-nav second-nav">
+                <li><a href="#">
+                  <h1 class="logo">SOKALSHOP</h1>
+                  <p class="p-logo">Internet-Store</p></a></li>
+                <li><div class="glyphicon glyphicon-earphone"></div></li>
+                <li><h4 class="phones"><span class="bold">(044) 537-02-22</span><br>(044) 503-00-00<br>0 800 503-000</h4></li>
+                <li class="line-v"></li>
+                <li><a href="#"><h4>City<br><span class="hi-bold">Select your city</span></h4></a></li>
+                <li class="line-v" ></li>
+                <li>
+                  <form class="form-container">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="poshuk" placeholder="Searching...">
+                    </div>
+                  </form>
+                </li>
+                <li>
+                  <div class="dropdown">
+                    <div class="dropdown-toggle" data-toggle="dropdown">By all categories <span class="glyphicon glyphicon-chevron-down"></span></div>
+                    <ul class="dropdown-menu"  >
+                      <li ><a href="#">Something-1</a></li>
+                      <li ><a href="#">Something-2</a></li>
+                      <li ><a href="#">Something-3</a></li>
+                      <li ><a href="#">Something-4</a></li>
+                      <li ><a href="#">Something-5</a></li>
+                      <li ><a href="#">Something-6</a></li>
+                      <li ><a href="#">Something-7</a></li>
+                      <li ><a href="#">Something-8</a></li>
+                      <li ><a href="#">Something-9</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li >
+                  <a href="#"><div class="basket"></div></a>
+                </li>
+              </ul>
+            </div>
           </div>
+        </nav>
       </div>
-        <div id="main">
-          <%= yield %>
-        </div>
-      <% else %>
+    </header>
+
+    <div class="wrapper clearfix">
+      <div id="main">
         <%= yield %>
-      <% end %>
+      </div>
     </div>
+
   </body>
 </html>

@@ -18,119 +18,51 @@
  *= require_self
  *= require jquery-ui
  *= require jquery-ui.theme.min
-
+ *= require jquery-ui-slider-pips
  *= require sweetalert2
- *= require font-awesome
+ *= require font
+ *= require home
+ *= require carts
+ *= require home
+ *= require line_items
+ *= require products
+ *= require scaffolds
+ *= require store
  */
 @import 'variables';
 @import 'colors';
 @import 'mixins';
+@import 'font-awesome';
 
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 100%;
-  text-decoration: none;
-}
-
-/* Clearfix */
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: block;
-}
-
-.clearfix:after {
-  clear:both;
-  font-size: 0;
-  height: 0;
-}
-
-.clear {
-  clear: both;
-}
-
-html, body {
-  width: auto !important;
-  height: 100%;
-  font-size: $font-size;
-}
+//html, body {
+//  height: 100%;
+//}
 
 .row{
   margin-left: 0;
   margin-right: 0;
 }
 
-body {
-  font-family: $font-family;
-  background-color: $white;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
-  @media only screen and (max-width: 767px) {
-    padding-top: 0px;
-  }
-  #container {
-    width: 1000px;
-    margin: auto;
-    #header {
-      #topMenu {
-        background: #CCCCCC;
-        margin: auto;
-        height: 70px;
-        padding: 10px;
-        border-bottom: 2px solid;
-        font: small-caps 40px/40px "Times New Roman", serif;
-        font-weight: bold;
-        color: #282;
-        text-align: center;
-        #title {
-          float: left;
-        }
-        #login {
-          float: right;
-          font-size: $font-size-lg;
-        }
-      }
-    }
-    #columns {
-      background: $lightgrey;
-      width: 1000px;
-      margin: auto;
-      #main {
-        float: right;
-        margin-left: 10em;
-        padding: 1em;
-        background: white;
-      }
-      #side {
-        float: left;
-        padding: 1em 2em;
-        width: 30%;
-        ul {
-          padding: 0;
-          li {
-            list-style: none;
-            a {
-              text-decoration: none;
-              font-size: $font-size-lg;
-            }
-          }
-        }
-      }
-    }
-  }
+#login {
+  font-size: $font-size-lg;
 }
 
+#main {
+  margin: auto;
+  padding: 1em;
+  background: white;
+}
 
 #notice {
   color : #000 !important;
-  border: 2px solid red;
-  padding: 1em;
-  margin-bottom: 2em;
+  border: 2px solid green;
+  border-radius: 3px;
+  padding: 20px;
+  margin: 17px auto;
+  text-align: center;
   background-color: #f0f0f0;
   font : bold smaller sans-serif;
+  width: 200px;
+
 }
 
