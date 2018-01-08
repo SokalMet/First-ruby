@@ -6,27 +6,22 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 gem 'responders', '~> 2.4'
 gem 'dalli', '~> 2.7', '>= 2.7.6'                       # Required for memcachier
-gem 'pg', '~> 0.21.0'
-# Use Puma as the app server
-gem 'puma', '~> 3.9'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'pg', '~> 0.21.0'                                   # Postgress driver
+gem 'puma', '~> 3.9'                                    # Use Puma as the app server
+gem 'sass-rails', '~> 5.0'                              # Use SCSS for stylesheets
+gem 'uglifier', '>= 1.3.0'                              # Use Uglifier as compressor for JavaScript assets
+gem 'sprockets-rails', '~> 3.2.1'                       # Sprockets Rails integration
 gem 'wicked_pdf', '~> 1.1'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-gem 'wkhtmltopdf-binary', '~> 0.12.3.1'
+gem 'jquery-rails', '~> 4.3.1'                          # JQuery
+gem 'jquery-ui-rails', '~> 6.0.1'                       # JQuery UI
+gem 'coffee-rails', '~> 4.2'                            # Use CoffeeScript for .coffee assets and views
+gem 'turbolinks', '~> 5'                                # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'jbuilder', '~> 2.5'                                # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'autoprefixer-rails', '~> 7.1', '>= 7.1.2.6'        # Parse CSS and add vendor prefixes to CSS rules
+gem 'bootstrap-select-rails', '~> 1.12', '>= 1.12.1'    # jQuery plugin that utilizes Bootstrap's dropdown.js to style.
 gem 'devise', '~> 4.3.0'                                # User authentication for users
 gem 'font-awesome-rails', '~> 4.7.0.2'                  # http://fontawesome.io/get-started/ for icons
 gem 'newrelic_rpm', '~> 4.3', '>= 4.3.0.335'            # Gem to support new relic application monitoring

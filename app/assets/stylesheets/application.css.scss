@@ -10,9 +10,45 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require bootstrap
+ *= require bootstrap-submenu
+ *= require bootstrap-glyphicons
+ *= require bootstrap-select
+ *= require bootstrap-social
  *= require_self
+ *= require jquery-ui
+ *= require jquery-ui.theme.min
+
+ *= require sweetalert2
+ *= require font-awesome
  */
+@import 'variables';
+@import 'colors';
+@import 'mixins';
+
+html, body {
+  width: auto !important;
+  height: 100%;
+  font-size: $font-size;
+}
+
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $white;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  @media only screen
+  and (max-width: 767px) {
+    padding-top:0px;
+  }
+}
+
 
 #topMenu {
   background: #CCCCCC;

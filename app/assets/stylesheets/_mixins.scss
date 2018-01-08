@@ -1,0 +1,34 @@
+@mixin semi-transparent($amount) {
+  zoom: 1;
+  filter: alpha(opacity=$amount * 10);
+  opacity:$amount / 10;
+}
+
+@mixin semi-transparent-button {
+  background-color: rgba(255,255,255,0.5);
+  padding:3px 15px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  border:1px solid rgba(255,255,255,1);
+  color:white;
+  text-decoration: none;
+  text-shadow: 0 0 4px #333;
+  -webkit-box-shadow: 0 0 4px 4px rgba(0,0,0,.3);
+  box-shadow: 0 0 2px 1px rgba(0,0,0,.3);
+}
+
+@mixin transitions-bg ($transitions-delay: 0.2s, $transition-timing: ease-out) {
+  -webkit-transition: background-color, color, $transitions-delay, $transition-timing;
+  -moz-transition: background-color, color, $transitions-delay, $transition-timing;
+  -o-transition: background-color, color, $transitions-delay, $transition-timing;
+  -ms-transition: background-color, color, $transitions-delay, $transition-timing;
+  transition: background-color, color, $transitions-delay, $transition-timing;
+}
+
+@mixin dark-text-shadow($spread,$color) {
+  text-shadow:
+  -1px -1px $spread $color,
+  1px -1px $spread $color,
+  -1px 1px $spread $color,
+  1px 1px $spread $color;
+}
