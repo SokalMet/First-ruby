@@ -10,6 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
+//= require bootstrap.min
 //= require turbolinks
 //= require jquery-ui
+//= require underscore_settings
+//= require underscore-min
+//= require sweetalert2.min
+//= require jquery.easy-overlay
+//= require jquery.ui.touch-punch.min
+//= require jquery-ui-combobox
+//= require js.cookie

@@ -26,6 +26,32 @@
 @import 'colors';
 @import 'mixins';
 
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  text-decoration: none;
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block;
+}
+
+.clearfix:after {
+  clear:both;
+  font-size: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
 html, body {
   width: auto !important;
   height: 100%;
@@ -43,29 +69,61 @@ body {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
-  @media only screen
-  and (max-width: 767px) {
-    padding-top:0px;
+  @media only screen and (max-width: 767px) {
+    padding-top: 0px;
+  }
+  #container {
+    width: 1000px;
+    margin: auto;
+    #header {
+      #topMenu {
+        background: #CCCCCC;
+        margin: auto;
+        height: 70px;
+        padding: 10px;
+        border-bottom: 2px solid;
+        font: small-caps 40px/40px "Times New Roman", serif;
+        font-weight: bold;
+        color: #282;
+        text-align: center;
+        #title {
+          float: left;
+        }
+        #login {
+          float: right;
+          font-size: $font-size-lg;
+        }
+      }
+    }
+    #columns {
+      background: $lightgrey;
+      width: 1000px;
+      margin: auto;
+      #main {
+        float: right;
+        margin-left: 10em;
+        padding: 1em;
+        background: white;
+      }
+      #side {
+        float: left;
+        padding: 1em 2em;
+        width: 30%;
+        ul {
+          padding: 0;
+          li {
+            list-style: none;
+            a {
+              text-decoration: none;
+              font-size: $font-size-lg;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-
-#topMenu {
-  background: #CCCCCC;
-  padding: 10px;
-  border-bottom : 2px solid;
-  font: small-caps 40px/40px "Times Mew Roman", serif;
-  font-weight: bold;
-  color: #282;
-  text-align: center;
-  img {
-    float: left;
-  }
-  a {
-    float: right;
-    font-size: 1.5rem;
-  }
-}
 
 #notice {
   color : #000 !important;
@@ -76,27 +134,3 @@ body {
   font : bold smaller sans-serif;
 }
 
-#columns {
-  background: #eeeeee;
-  #main {
-    margin-left: 10em;
-    padding: 1em;
-    background: white ;
-  }
-  #side {
-    float: left ;
-    padding: 1em 2em;
-    width : 6em;
-    background: #eeeeee;
-    ul {
-      padding: 0;
-      li {
-        list-style : none;
-        a {
-          text-decoration: none;
-          font-size: 1.5rem;
-        }
-      }
-    }
-  }
-}

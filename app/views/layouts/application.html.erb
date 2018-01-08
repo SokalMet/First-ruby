@@ -11,34 +11,41 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-
-  <body class="<%= controller.controller_name %>">
-    <div id="topMenu">
-      <%= @page_title || "Sokal shop"%>
-      <!--https://launchschool.com/blog/how-to-use-devise-in-rails-for-authentication-->
-      <% if user_signed_in? %>
-        <%= link_to "Logout #{ current_user.email }", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Login', new_user_session_path, method: :get %>
-      <% end %>
-    </div>
-    <div id="columns">
-      <% if user_signed_in? %>
-        <div id="side">
-          <ul>
-            <li><%= link_to "Products", products_path %></li>
-            <li><%= link_to "Store", store_path %></li>
-            <li><a href="">Questions</a></li>
-            <li><a href="">News</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a></a></li>
-          </ul>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="topMenu">
+          <div id="title">
+            SokalShop
+          </div>
+          <div id="login">
+            <!--https://launchschool.com/blog/how-to-use-devise-in-rails-for-authentication-->
+            <% if user_signed_in? %>
+                <%= link_to "Logout #{ current_user.email }", destroy_user_session_path, method: :delete %>
+            <% else %>
+                <%= link_to 'Login', new_user_session_path, method: :get %>
+            <% end %>
+          </div>
         </div>
+      </div>
+      <div id="columns">
+        <% if user_signed_in? %>
+          <div id="side">
+            <ul>
+              <li><%= link_to "Products", products_path %></li>
+              <li><%= link_to "Store", store_path %></li>
+              <li><a href="">Questions</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a></a></li>
+            </ul>
+          </div>
+      </div>
         <div id="main">
-          <%= yield%>
+          <%= yield %>
         </div>
       <% else %>
-        <%= yield%>
+        <%= yield %>
       <% end %>
     </div>
   </body>
