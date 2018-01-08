@@ -12,20 +12,16 @@ footer {
   vertical-align: top;
   text-align: left;
   color: white;
-}
-
-.block-f ul {
-  padding-bottom: 15px;
-
-}
-
-.block-f ul li {
-  list-style-type:none;
-  padding-bottom: 7px;
-}
-
-.block-f ul li a {
-  color: white;
+  ul {
+    padding-bottom: 15px;
+    li {
+      list-style-type:none;
+      padding-bottom: 7px;
+      a {
+        color: white;
+      }
+    }
+  }
 }
 
 .m-bottom {

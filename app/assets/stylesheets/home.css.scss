@@ -147,11 +147,13 @@ a:hover {
 	border-radius: 4px;    
 }
 
-.dropdown .dropdown-toggle {
-	color: white;
-	font-size: 14px;
-	text-align: center;
-	padding: 7px 3px 0 13px;
+.dropdown {
+    .dropdown-toggle {
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        padding: 7px 3px 0 13px;
+    }
 }
 
 .glyphicon-chevron-down {
@@ -201,10 +203,14 @@ h4 {
     height: 15px;
 }
 
-.black-text li a {
-	margin-top: 1px;
-	font-size: 12px;
-	color: black;
+.black-text {
+    li {
+        a {
+          margin-top: 1px;
+          font-size: 12px;
+          color: black;
+        }
+    }
 }
 
 ul.second-nav {
