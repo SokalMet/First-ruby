@@ -1,26 +1,30 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
 
-<h1>All Products</h1>
+<h1>
+  <%= link_to 'New Product', new_product_path, class: 'btn btn-success'  %>
+  All Products
+</h1>
+
 
 <table>
-    <% @products.each do |product| %>
-      <tr class="<%= cycle('list_line_odd', 'list_line_even')%>">
+  <% @products.each do |product| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td>
-          <%= image_tag(product.image_url, class: 'list_image')%>
+          <%= image_tag(product.image_url, class: 'list_image') %>
         </td>
         <td class="list_description">
-            <dl>
-              <dt><%= product.title%></dt>
-              <dd><%= truncate(strip_tags(product.description), length: 80)%></dd>
-            </dl>
+          <dl>
+            <dt><%= product.title %></dt>
+            <dd><%= truncate(strip_tags(product.description), length: 80) %></dd>
+          </dl>
+          <dl>
+            <dt class="product-functions">
+              <%= link_to 'Show', product, class: 'btn btn-default' %>&nbsp;|
+              <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-primary' %>&nbsp;|
+              <%= link_to 'Destroy', product, class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+            </dt>
+          </dl>
         </td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+  <% end %>
 </table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>

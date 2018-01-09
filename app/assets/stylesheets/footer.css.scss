@@ -16,12 +16,10 @@ footer {
 
 .block-f ul {
   padding-bottom: 15px;
-
 }
 
 .block-f ul li {
   list-style-type:none;
-  padding-bottom: 7px;
 }
 
 .block-f ul li a {
@@ -41,6 +39,7 @@ footer {
 }
 
 .blue,
+.green,
 .phone1,
 .phone2 {
   float: left;
@@ -48,6 +47,10 @@ footer {
 
 .blue {
   color: blue;
+  padding: 3px 20px 10px 0;
+}
+.green {
+  color: green;
   padding: 3px 20px 10px 0;
 }
 
