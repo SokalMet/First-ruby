@@ -19,7 +19,7 @@ module Shop
     config.active_support.escape_html_entities_in_json = true
 
     # Enable the asset pipeline
-    config.assets.enabled = false
+    config.assets.enabled = true
 
     # Add web fonts
     config.assets.paths << Rails.root.join('app/assets/fonts')

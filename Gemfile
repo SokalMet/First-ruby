@@ -26,6 +26,7 @@ gem 'devise', '~> 4.3.0'                                # User authentication fo
 gem 'font-awesome-rails', '~> 4.7.0.2'                  # http://fontawesome.io/get-started/ for icons
 gem 'newrelic_rpm', '~> 4.3', '>= 4.3.0.335'            # Gem to support new relic application monitoring
 gem 'nokogiri', '~> 1.8'                                # HTML and XML Parser
+gem 'webpacker', '~> 3.0'                               # Webpacker makes it easy to use the JavaScript pre-processor and bundler
 
 group :production do
   gem 'font_assets', '~> 0.1.14'                        # Let Cloudfront serve web fonts OK: http://kennethjiang.blogspot.com/2014/07/set-up-cors-in-cloudfront-for-custom.html
@@ -66,7 +67,6 @@ group :test do
   gem 'site_prism', '~> 2.9'                            # for using page-object pattern in cucumber
   gem 'test-prof', '0.2.1'                              # https://evilmartians.com/chronicles/testprof-a-good-doctor-for-slow-ruby-tests
   gem 'timecop', '~> 0.9.1'                             # Set system time for tests
-  gem 'rspec-html-matchers'                             # For testing complex html output, useful for testing forms
   gem 'mutest-rspec', '~> 0.0.7'                        # Mutation testing for ruby
   gem 'database_cleaner', '~> 1.6', '>= 1.6.1'          # database_cleaner is not required, but highly recommended
 end
