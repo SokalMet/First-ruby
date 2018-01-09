@@ -84,3 +84,17 @@
 
 }
 
+.new_user {
+  .actions {
+    input {
+      @include buttons($mediumseagreen);
+    }
+  }
+}
+
+.button_to {
+  input {
+    @include buttons($mediumseagreen);
+  }
+}
+
