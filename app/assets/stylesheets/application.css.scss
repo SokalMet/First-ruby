@@ -52,6 +52,23 @@
   margin: auto;
   padding: 1em;
   background: white;
+  h1{
+    a.btn-success{
+      float: left;
+    }
+  }
+  table{
+    tr{
+      border: solid;
+      border-width: 1px;
+      img{
+        padding: 2px;
+      }
+      .list_description{
+        padding: 5px;
+      }
+    }
+  }
 }
 
 #notice {

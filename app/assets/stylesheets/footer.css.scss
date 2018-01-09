@@ -37,6 +37,7 @@ footer {
 }
 
 .blue,
+.green,
 .phone1,
 .phone2 {
   float: left;
@@ -44,6 +45,10 @@ footer {
 
 .blue {
   color: blue;
+  padding: 3px 20px 10px 0;
+}
+.green {
+  color: green;
   padding: 3px 20px 10px 0;
 }
 
