@@ -49,9 +49,9 @@
               </div>
             </li>
             <li>
-              <a href="#">
+              <%= link_to cart_path(current_cart), class: 'link-on-basket' do %>
                 <div class="basket"></div>
-              </a>
+              <% end %>
             </li>
           </ul>
         </div>

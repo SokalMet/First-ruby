@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
   before_action :authenticate_user!
   #before_action :set_line_item, only: [:show, :edit, :update, :destroy]
-  before_action :set_cart,only: [:create]
+  # before_action :set_cart,only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
   include CurrentCart
   # GET /line_items
@@ -28,7 +28,7 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     product = Product.find(params[:product_id])
-    @line_item = @cart.add_product(product.id)
+    @line_item = current_cart.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save
