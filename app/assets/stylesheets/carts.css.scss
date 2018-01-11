@@ -1,3 +1,18 @@
 // Place all the styles related to the Carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carts {
+  border-collapse: initial;
+  .item_price {
+    text-align: left;
+  }
+  .total_line {
+    span {
+      font-weight: bold;
+      border-top: solid;
+      border-width: 1px;
+      border-color: #c0c0c0;
+    }
+  }
+}
