@@ -98,3 +98,18 @@
   }
 }
 
+.alert_wrapper {
+  max-width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2px;
+  .alert {
+    padding: 2px;
+    margin-bottom: 2px;
+    border: 2px solid green;
+    border-radius: 8px;
+    .close {
+      padding-right: 8px;
+    }
+  }
+}

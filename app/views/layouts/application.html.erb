@@ -64,7 +64,7 @@
         <div class="row">
           <ul class="nav navbar-nav first-nav">
             <% if user_signed_in? %>
-              <% if current_user.email==="a@a.a" %>
+              <% if current_user.email === ENV['ADMIN_EMAIL'] %>
                 <li><%= link_to 'Products', products_path %></li>
               <% end %>
             <% end %>
