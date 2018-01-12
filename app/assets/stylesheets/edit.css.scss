@@ -1,0 +1,14 @@
+@import 'colors';
+@import 'mixins';
+
+#product_title {
+  width: 60%;
+}
+
+#product_description {
+  width: 90%;
+}
+
+input.update_product {
+  @include buttons($mediumseagreen)
+}
