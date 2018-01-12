@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'mixins';
 
 /* RESET */
 * {
@@ -130,6 +131,10 @@ a:hover {
   background-repeat: no-repeat;
   cursor: pointer;
   margin: 4px;
+  position: absolute;
+  top: -36px;
+  left: 18px;
+  z-index: 100;
 }
 
 .form-container {
@@ -139,11 +144,12 @@ a:hover {
 }
 
 .dropdown {
-  width: 180px;
+  width: 165px;
   height: 34px;
   margin-top: 20px;
   background-color: black;
   border-radius: 4px;
+  margin-right: 5px;
 }
 
 .dropdown {

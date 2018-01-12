@@ -22,3 +22,4 @@
 //= require jquery.ui.touch-punch.min
 //= require jquery-ui-combobox
 //= require js.cookie
+//= require home
