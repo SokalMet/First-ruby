@@ -62,11 +62,43 @@
     tr{
       border: solid;
       border-width: 1px;
-      img{
-        padding: 2px;
+      .product-img {
+        border-right: solid;
+        border-width: 1px;
+        width: 200px;
+        height: 200px;
+        background-color: #e6e6e6;
+        img {
+          width: 140px;
+          height: auto;
+          max-height: 190px;
+        }
+
       }
-      .list_description{
+      .list_description {
         padding: 5px;
+        position: relative;
+      }
+      .product-title {
+        position: absolute;
+        top: 10px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .product-description{
+        text-align: left;
+        font-size: 1.5rem;
+        padding-top: 20px;
+      }
+
+      .product-functions{
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
       }
     }
   }

@@ -2,27 +2,32 @@
   <%= link_to 'New Product', new_product_path, class: 'btn btn-success'  %>
   All Products
 </h1>
-<%= will_paginate @products, :style => 'color:blue' %>
-<%= page_entries_info @products %>
-<table>
+<div>
+  <%= will_paginate @products, :style => 'color:blue' %>
+  <%= page_entries_info @products %>
+</div>
+<!--<p id="notice"><%= notice %></p>-->
+<table class="col-md-offset-1 col-md-10">
   <% @products.each do |product| %>
+      <tbody>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-        <td>
+        <td class="product-img">
           <%= image_tag(product.image_url, class: 'list_image') %>
         </td>
         <td class="list_description">
-          <dl>
-            <dt><%= product.title %></dt>
-            <dd><%= truncate(strip_tags(product.description), length: 80) %></dd>
-          </dl>
-          <dl>
-            <dt class="product-functions">
-              <%= link_to 'Show', product, class: 'btn btn-default' %>&nbsp;|
-              <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-primary' %>&nbsp;|
-              <%= link_to 'Destroy', product, class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
-            </dt>
-          </dl>
+          <div class="product-title">
+            <%= product.title %>
+          </div>
+          <div class="product-description">
+            <%= truncate(strip_tags(product.description), length: 80) %>
+          </div>
+          <div class="product-functions">
+            <%= link_to 'Show', product, class: 'btn btn-default' %>&nbsp;|
+            <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-primary' %>&nbsp;|
+            <%= link_to 'Destroy', product, class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+          </div>
         </td>
       </tr>
+      </tbody>
   <% end %>
 </table>
