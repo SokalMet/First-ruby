@@ -1,14 +1,48 @@
 @import 'colors';
 @import 'mixins';
 
-#product_title {
-  width: 60%;
+.edit_product {
+  text-align: left;
 }
 
 #product_description {
-  width: 90%;
+  width: 70%;
+  text-align: left;
 }
 
 input.update_product {
-  @include buttons($mediumseagreen)
+  @include buttons($mediumseagreen);
+}
+
+#product_title {
+  font-weight: bold;
+  font-size: 20px;
+  width: 80%;
+}
+
+#product_description {
+  width: 80%;
+  border: 1px solid $mediumlightgrey;
+}
+
+#product_image_url {
+  width: 80%;
+}
+
+#product_price {
+  width: 150px;
+}
+
+.field {
+  width: 50%;
+  padding: 2px 0;
+  label {
+    font-weight: bold;
+    font-size: 25px;
+    width: 150px;
+    padding-left: 5px;
+  }
+  .actions {
+    text-align: center;
+  }
 }

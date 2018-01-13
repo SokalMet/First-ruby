@@ -30,15 +30,12 @@
  *= require store
  *= require footer
  *= require edit
+ *= require show
  */
 @import 'variables';
 @import 'colors';
 @import 'mixins';
 @import 'font-awesome';
-
-//html, body {
-//  height: 100%;
-//}
 
 .row{
   margin-left: 0;
@@ -60,8 +57,7 @@
   }
   table{
     tr{
-      border: solid;
-      border-width: 1px;
+      border: 1px solid $mediumlightgrey;
       .product-img {
         border-right: solid;
         border-width: 1px;

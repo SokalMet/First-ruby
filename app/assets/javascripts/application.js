@@ -23,3 +23,8 @@
 //= require jquery-ui-combobox
 //= require js.cookie
 //= require home
+//= require autogrow/jquery.autogrow
+
+$(document).ready(function() {
+    $('textarea').autoGrow();
+});
