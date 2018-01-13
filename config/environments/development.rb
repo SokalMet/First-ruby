@@ -61,7 +61,4 @@ Rails.application.configure do
 
   ENV['WEBSITE_URL'] = 'localhost:3000'
   ENV['ADMIN_EMAIL'] = 'sokalmet@ukr.net'
-  ENV['FACEBOOK_APP_ID'] = '802007829988901'
-  ENV['FACEBOOK_APP_SECRET'] = 'cde90b4d86ce1acf42e626abde102723'
-
 end

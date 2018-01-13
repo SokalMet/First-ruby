@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users
   devise_scope :user do
     get 'users/relogin', :to => 'sessions#relogin'
     get 'users/resignup', :to => 'registrations#resignup'
