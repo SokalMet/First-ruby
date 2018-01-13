@@ -23,7 +23,35 @@
 #---
 # encoding: utf-8
 Product.delete_all
-Product.create(:title => 'Web Design for Developers',
+Product.create(:title => 'Web Design for Developers 1',
+               :description =>
+                   %{<p>
+        <em>Web Design for Developers</em> will show you how to make your
+        web-based application look professionally designed. We'll help you
+        learn how to pick the right colors and fonts, avoid costly interface
+        and accessibility mistakes -- your application will really come alive.
+        We'll also walk you through some common Photoshop and CSS techniques
+        and work through a web site redesign, taking a new design from concept
+        all the way to implementation.
+      </p>},
+               :image_url =>   '/assets/cs.jpg',
+               :price => 42.75)
+# . . .
+Product.create(:title => 'Web Design for Developers 2',
+               :description =>
+                   %{<p>
+        <em>Web Design for Developers</em> will show you how to make your
+        web-based application look professionally designed. We'll help you
+        learn how to pick the right colors and fonts, avoid costly interface
+        and accessibility mistakes -- your application will really come alive.
+        We'll also walk you through some common Photoshop and CSS techniques
+        and work through a web site redesign, taking a new design from concept
+        all the way to implementation.
+      </p>},
+               :image_url =>   '/assets/cs.jpg',
+               :price => 42.85)
+# . . .
+Product.create(:title => 'Web Design for Developers 3',
                :description =>
                    %{<p>
         <em>Web Design for Developers</em> will show you how to make your
@@ -37,7 +65,28 @@ Product.create(:title => 'Web Design for Developers',
                :image_url =>   '/assets/cs.jpg',
                :price => 42.95)
 # . . .
-Product.create(:title => 'Programming Ruby 1.9',
+
+Product.create(:title => 'Programming Ruby 1.9.1',
+               :description =>
+                   %{<p>
+        Ruby is the fastest growing and most exciting dynamic language
+        out there. If you need to get working programs delivered fast,
+        you should add Ruby to your toolbox.
+      </p>},
+               :image_url => '/assets/ruby.jpg',
+               :price => 47.50)
+# . . .
+Product.create(:title => 'Programming Ruby 1.9.2',
+               :description =>
+                   %{<p>
+        Ruby is the fastest growing and most exciting dynamic language
+        out there. If you need to get working programs delivered fast,
+        you should add Ruby to your toolbox.
+      </p>},
+               :image_url => '/assets/ruby.jpg',
+               :price => 48.50)
+# . . .
+Product.create(:title => 'Programming Ruby 1.9.3',
                :description =>
                    %{<p>
         Ruby is the fastest growing and most exciting dynamic language
@@ -48,7 +97,7 @@ Product.create(:title => 'Programming Ruby 1.9',
                :price => 49.50)
 # . . .
 
-Product.create(:title => 'Rails Test Prescriptions',
+Product.create(:title => 'Rails Test Prescriptions 1',
                :description =>
                    %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
@@ -60,3 +109,29 @@ Product.create(:title => 'Rails Test Prescriptions',
       </p>},
                :image_url => '/assets/rtp.jpg',
                :price => 43.75)
+# . . .
+Product.create(:title => 'Rails Test Prescriptions 2',
+               :description =>
+                   %{<p>
+        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
+        Rails applications, covering Test-Driven Development from both a
+        theoretical perspective (why to test) and from a practical perspective
+        (how to test effectively). It covers the core Rails testing tools and
+        procedures for Rails 2 and Rails 3, and introduces popular add-ons,
+        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
+      </p>},
+               :image_url => '/assets/rtp.jpg',
+               :price => 44.75)
+# . . .
+Product.create(:title => 'Rails Test Prescriptions 3',
+               :description =>
+                   %{<p>
+        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
+        Rails applications, covering Test-Driven Development from both a
+        theoretical perspective (why to test) and from a practical perspective
+        (how to test effectively). It covers the core Rails testing tools and
+        procedures for Rails 2 and Rails 3, and introduces popular add-ons,
+        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
+      </p>},
+               :image_url => '/assets/rtp.jpg',
+               :price => 45.75)
