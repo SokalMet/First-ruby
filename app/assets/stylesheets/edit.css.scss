@@ -3,6 +3,13 @@
 
 .edit_product {
   text-align: left;
+  table {
+    .field {
+      label {
+        width: 145px;
+      }
+    }
+  }
 }
 
 #product_description {
