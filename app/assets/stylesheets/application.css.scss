@@ -46,6 +46,10 @@
   font-size: $font-size-lg;
 }
 
+img {
+  border: 1px solid lightgrey;
+}
+
 #main {
   margin: auto;
   padding: 1em;
@@ -144,7 +148,7 @@
     border: 2px solid green;
     border-radius: 8px;
     .close {
-      padding: 6px;
+      padding-right: 3px;
     }
   }
 }
