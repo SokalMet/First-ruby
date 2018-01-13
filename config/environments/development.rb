@@ -52,6 +52,16 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  # Mail send - need for devise
+  host = 'localhost:3000'
+  config.action_mailer.asset_host = "http://#{host}"
+  config.action_mailer.default_url_options = { :host => host }
+  config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.raise_delivery_errors = true
+
+  ENV['WEBSITE_URL'] = 'localhost:3000'
   ENV['ADMIN_EMAIL'] = 'sokalmet@ukr.net'
+  ENV['FACEBOOK_APP_ID'] = '802007829988901'
+  ENV['FACEBOOK_APP_SECRET'] = 'cde90b4d86ce1acf42e626abde102723'
 
 end
