@@ -27,6 +27,7 @@ gem 'font-awesome-rails', '~> 4.7.0.2'                  # http://fontawesome.io/
 gem 'newrelic_rpm', '~> 4.3', '>= 4.3.0.335'            # Gem to support new relic application monitoring
 gem 'nokogiri', '~> 1.8'                                # HTML and XML Parser
 gem 'omniauth-facebook'                                 # OAuth Facebook provider
+gem 'will_paginate', '~> 3.1.0'                         # For pagination
 
 group :production do
   gem 'font_assets', '~> 0.1.14'                        # Let Cloudfront serve web fonts OK: http://kennethjiang.blogspot.com/2014/07/set-up-cors-in-cloudfront-for-custom.html
