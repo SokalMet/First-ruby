@@ -2,8 +2,8 @@
   <%= link_to 'New Product', new_product_path, class: 'btn btn-success'  %>
   All Products
 </h1>
-<div>
-  <%= will_paginate @products, :style => 'color:blue' %>
+<div class="paginate">
+  <%= will_paginate @products %><br />
   <%= page_entries_info @products %>
 </div>
 <table class="col-md-offset-1 col-md-10">
