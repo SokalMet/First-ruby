@@ -26,5 +26,5 @@
 //= require autogrow/jquery.autogrow
 
 $(document).ready(function() {
-    $('textarea').autoGrow();
+  $('textarea').autoGrow();
 });

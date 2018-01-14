@@ -69,8 +69,8 @@ div {
   }
 }
 
-.blue1 {
-  background-color: $blue;
+.color1 {
+  background-color: #1AB7C1;
 }
 
 .white {
@@ -130,16 +130,11 @@ a:hover {
 /*header-2*/
 
 .basket {
-  height: 40px;
-  width: 60px;
-  background-image: asset-data-url('basket.png');
-  background-repeat: no-repeat;
-  cursor: pointer;
-  margin: 4px;
-  position: absolute;
-  top: -36px;
-  left: 18px;
-  z-index: 100;
+  @include basket(asset-data-url('empty_cart44.png'))
+}
+
+.basket1 {
+  @include basket(asset-data-url('full_cart44.png'))
 }
 
 .form-container {

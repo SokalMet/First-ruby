@@ -41,3 +41,11 @@
   margin: 5px;
   color: white;
 }
+
+@mixin basket($image) {
+  height: 44px;
+  width: 44px;
+  background-image: $image;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

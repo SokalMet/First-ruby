@@ -16,7 +16,7 @@
 <body>
 <header class="navbar-fixed-top">
   <div class="header">
-    <nav class="navbar navbar-default blue1">
+    <nav class="navbar navbar-default color1">
       <div class="container">
         <div class="row">
           <ul class="nav navbar-nav second-nav">
@@ -50,9 +50,12 @@
               </div>
             </li>
             <li>
-              <div id="circle" class="show"><span class="quantity">1</span></div>
               <%= link_to cart_path(current_cart), class: 'link-on-basket' do %>
-                <div class="basket"></div>
+                <% if cart_empty? %>
+                  <div class="basket"></div>
+                <% else %>
+                  <div class="basket1"></div>
+                <% end %>
               <% end %>
             </li>
           </ul>
