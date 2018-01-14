@@ -24,8 +24,10 @@
 //= require autogrow/jquery.autogrow
 //= require sweetalert2.min
 //= require alert
+//= require jquery.easy-overlay
 
 $(function() {
+  $('.wrapper').easyOverlay('stop');
   $('textarea').autoGrow();
 
   $(document).on('click dblclick', '.btn-danger', function(e) {
@@ -35,6 +37,7 @@ $(function() {
     Sokalshop.Alerts.warning().then(function (isConfirm) {
       if (isConfirm) {
         $button.parent().parent().find('.empty_cart').click();
+        $('.wrapper').easyOverlay('start');
       }
     })
   })
