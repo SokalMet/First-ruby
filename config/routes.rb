@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
-  devise_scope :user do
-    get 'users/relogin', :to => 'sessions#relogin'
-    get 'users/resignup', :to => 'registrations#resignup'
-  end
+  devise_for :users, :controllers => { :sessions => 'users/sessions' }
 
   resources :line_items
   resources :carts
