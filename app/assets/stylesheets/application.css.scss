@@ -36,7 +36,7 @@
 @import 'mixins';
 @import 'font-awesome';
 
-.row{
+.row {
   margin-left: 0;
   margin-right: 0;
 }
@@ -63,13 +63,13 @@ img {
   margin: auto;
   padding: 1em;
   background: white;
-  h1{
-    a.btn-success{
+  h1 {
+    a.btn-success {
       float: left;
     }
   }
-  table{
-    tr{
+  table {
+    tr {
       border: 1px solid $mediumlightgrey;
       .product-img {
         border-right: solid;
@@ -84,9 +84,44 @@ img {
         }
 
       }
+      .product-img.edit {
+        div {
+          margin: 5px;
+        }
+      }
+      .edit {
+        font-size: 18px !important;
+      }
       .list_description {
         padding: 5px;
         position: relative;
+        .edit {
+          position: relative;
+          text-align: left !important;
+          left: 0;
+          margin-bottom: 10px;
+          label{
+            min-width: 120px;
+          }
+          textarea{
+            min-width: 80%;
+            overflow: visible;
+          }
+          //&.product-description,
+          //&.product-title,
+          //&.product-functions,
+          //&.price {
+          //  text-align: left !important;
+          //  strong {
+          //    position: relative;
+          //    left: 20px;
+          //  }
+          //  span {
+          //    position: relative;
+          //    left: 20%;
+          //  }
+          //}
+        }
       }
       .product-title {
         position: absolute;
@@ -97,14 +132,18 @@ img {
         left: 20px;
         margin-bottom: 20px;
       }
+      .product-title.edit {
+      }
 
-      .product-description{
+      .product-description {
         text-align: left;
         font-size: 1.5rem;
         padding-top: 20px;
       }
+      .product-description.edit {
+      }
 
-      .product-functions{
+      .product-functions {
         position: absolute;
         bottom: 10px;
         right: 20px;
@@ -120,14 +159,14 @@ img {
 }
 
 #notice {
-  color : #000 !important;
+  color: #000 !important;
   border: 2px solid green;
   border-radius: 3px;
   padding: 20px;
   margin: 17px auto;
   text-align: center;
   background-color: #f0f0f0;
-  font : bold smaller sans-serif;
+  font: bold smaller sans-serif;
   width: 200px;
 
 }

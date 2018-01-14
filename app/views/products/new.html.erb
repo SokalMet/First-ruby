@@ -2,4 +2,56 @@
 
 <%= render 'form', product: @product %>
 
+<div class="clearfix">
+  <%= form_for(product, url: product_path, method: :patch) do |form| %>
+      <% if product.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+            <ul>
+              <% product.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      <table class="col-md-offset-1 col-md-10">
+        <tbody>
+        <tr>
+          <td class="field">
+            <%= form.label :title %>
+            <%= form.text_field :title, id: :product_title %>
+          </td >
+        </tr>
+        <tr>
+          <td class="field">
+            <%= form.label :description %>
+            <%= form.text_area :description, id: :product_description, rows: 6 %>
+          </td>
+        </tr>
+        <tr>
+          <td class="field">
+            <%= image_tag(product.image_url) %><br \>
+            <%= form.label :image_url %>
+            <%= form.text_field :image_url, id: :product_image_url %>
+          </td>
+        </tr>
+        <tr>
+          <td class="field">
+            <%= form.label :price %>
+            <%= form.text_field :price, id: :product_price %>
+          </td>
+        </tr>
+        <tr>
+          <td class="field">
+            <div class="actions">
+              <%= form.submit 'Save product', class: :'update_product' %>
+            </div>
+          </td>
+        </tr>
+        <tbody>
+      </table>
+  <% end %>
+</div>
+
 <%= link_to 'Back', products_path %>
