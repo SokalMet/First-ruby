@@ -127,6 +127,8 @@ img {
   .actions {
     input {
       @include buttons($mediumseagreen);
+      width: auto;
+      padding: 0 8px;
     }
   }
 }
