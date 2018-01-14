@@ -1,5 +1,5 @@
 <div class="clearfix">
-<%= form_for(product, url: product_path, method: :patch) do |form| %>
+<%= form_for(product, url: products_path, method: :patch) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -27,7 +27,6 @@
       </tr>
       <tr>
         <td class="field">
-          <%= image_tag(product.image_url) %><br \>
           <%= form.label :image_url %>
           <%= form.text_field :image_url, id: :product_image_url %>
         </td>

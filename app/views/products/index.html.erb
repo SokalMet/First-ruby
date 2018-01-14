@@ -6,7 +6,7 @@
   <%= will_paginate @products %><br />
   <%= page_entries_info @products %>
 </div>
-<table class="col-md-offset-1 col-md-10">
+<table class="col-md-12">
   <% @products.each do |product| %>
       <tbody>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">

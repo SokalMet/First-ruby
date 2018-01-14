@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
   validates :title, uniqueness: true
   validates :image_url, allow_blank: true, format: {
       with: %r{\.(gif|jpg|png)\Z}i,
-      message: 'URL shuld include formats: jpg, gif, png'
+      message: 'URL should include formats: jpg, gif, png'
   }
   def ensure_not_referenced_by_any_line_item
     if line_items.empty?
