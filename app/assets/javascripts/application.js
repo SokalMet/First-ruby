@@ -17,14 +17,25 @@
 //= require jquery-ui
 //= require underscore_settings
 //= require underscore-min
-//= require sweetalert2.min
 //= require jquery.easy-overlay
 //= require jquery.ui.touch-punch.min
 //= require jquery-ui-combobox
 //= require js.cookie
-//= require home
 //= require autogrow/jquery.autogrow
+//= require sweetalert2.min
+//= require alert
 
-$(document).ready(function() {
+$(function() {
   $('textarea').autoGrow();
+
+  $(document).on('click dblclick', '.btn-danger', function(e) {
+    var $button = $(this);
+    e.preventDefault();
+    e.stopPropagation();
+    Sokalshop.Alerts.warning().then(function (isConfirm) {
+      if (isConfirm) {
+        $button.parent().parent().find('.empty_cart').click();
+      }
+    })
+  })
 });

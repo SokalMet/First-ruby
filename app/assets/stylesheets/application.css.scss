@@ -19,14 +19,13 @@
  *= require jquery-ui
  *= require jquery-ui.theme.min
  *= require jquery-ui-slider-pips
- *= require sweetalert2
+ *= require sweetalert2.min
  *= require font
  *= require home
  *= require carts
  *= require home
  *= require line_items
  *= require products
- *= require scaffolds
  *= require store
  *= require footer
  *= require edit
@@ -48,6 +47,17 @@
 
 img {
   border: 1px solid lightgrey;
+}
+
+.btn {
+  border-radius: 8px;
+}
+
+.secrete {
+  background-color: white !important;
+  width: 1px !important;
+  height: 1px !important;
+  border-color: white;
 }
 
 #main {
@@ -153,4 +163,18 @@ img {
       padding-right: 3px;
     }
   }
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
 }
