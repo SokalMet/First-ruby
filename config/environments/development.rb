@@ -60,5 +60,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   ENV['WEBSITE_URL'] = 'localhost:3000'
+  ENV['DOMAIN_URL'] = 'localhost:3000'
   ENV['ADMIN_EMAIL'] = 'sokalmet@ukr.net'
+
 end
