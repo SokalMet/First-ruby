@@ -53,14 +53,31 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Mail send - need for devise
+  ENV['SENDGRID_USERNAME'] = 'apikey'
+  ENV['SENDGRID_PASSWORD'] = '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'
+
   host = 'localhost:3000'
   config.action_mailer.asset_host = "http://#{host}"
   config.action_mailer.default_url_options = { :host => host }
-  config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+
+  ActionMailer::Base.smtp_settings = {
+      :from => 'sokalmet@ukr.net',
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
+      :domain => host,
+      :address => 'smtp.sendgrid.net',
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
+  }
 
   ENV['WEBSITE_URL'] = 'localhost:3000'
   ENV['DOMAIN_URL'] = 'localhost:3000'
   ENV['ADMIN_EMAIL'] = 'sokalmet@ukr.net'
+
 
 end
