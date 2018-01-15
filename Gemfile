@@ -27,6 +27,7 @@ gem 'font-awesome-rails', '~> 4.7.0.2'                  # http://fontawesome.io/
 gem 'newrelic_rpm', '~> 4.3', '>= 4.3.0.335'            # Gem to support new relic application monitoring
 gem 'nokogiri', '~> 1.8'                                # HTML and XML Parser
 gem 'will_paginate', '~> 3.1.0'                         # For pagination
+gem 'sendgrid-ruby'                                     # For emails sending
 gem 'sweetalert-rails'
 
 

@@ -53,12 +53,30 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Mail send - need for devise
+  ENV['SMTP_USERNAME'] = 'sokalmet2018@gmail.com'
+  ENV['SMTP_PASSWORD'] = 'Benzopilin_1'
+
   host = 'localhost:3000'
   config.action_mailer.asset_host = "http://#{host}"
   config.action_mailer.default_url_options = { :host => host }
-  config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+
+
+  ActionMailer::Base.smtp_settings = {
+      :from => 'sokalmet2018@gmail.com',
+      :user_name      => ENV['SMTP_USERNAME'],
+      :password       => ENV['SMTP_PASSWORD'],
+      :domain => host,
+      :address => 'smtp.gmail.com',
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
+  }
 
   ENV['WEBSITE_URL'] = 'localhost:3000'
+  ENV['DOMAIN_URL'] = 'localhost:3000'
   ENV['ADMIN_EMAIL'] = 'sokalmet@ukr.net'
 end
