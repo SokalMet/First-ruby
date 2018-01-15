@@ -45,6 +45,21 @@
   font-size: $font-size-lg;
 }
 
+.btn-google-plus {
+  max-width: 245px;
+  margin: 5px auto;
+  background-color: #DD4B65;
+  display: block;
+  font-size: 17px;
+  padding-left: 1px;
+  &:hover {
+    color: white !important;
+  }
+  i.fa {
+    padding: 0 12px;
+  }
+}
+
 img {
   border: 1px solid lightgrey;
 }
@@ -67,6 +82,7 @@ input#user_email {
   margin: auto;
   padding: 1em;
   background: white;
+  min-height: 600px;
   h1 {
     a.btn-success {
       float: left;

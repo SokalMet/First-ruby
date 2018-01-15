@@ -29,6 +29,8 @@ gem 'nokogiri', '~> 1.8'                                # HTML and XML Parser
 gem 'will_paginate', '~> 3.1.0'                         # For pagination
 gem 'sendgrid-ruby'                                     # For emails sending
 gem 'sweetalert-rails'
+gem 'omniauth-google-oauth2', '~> 0.2.1'                # This gem allows to add Google authentication
+
 
 
 group :production do
