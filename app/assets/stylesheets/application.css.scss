@@ -191,6 +191,10 @@ input#user_email {
 .button_to {
   input {
     @include buttons($mediumseagreen);
+    &:hover{
+      font-weight: bold;
+      font-size: 15px;
+    }
   }
 }
 
