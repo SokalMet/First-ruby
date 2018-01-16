@@ -231,9 +231,18 @@ input#user_email {
 }
 
 #error_explanation {
-  width: 450px;
+  width: 650px;
   border: 2px solid red;
+  margin: 0 auto;
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+  h4 {
+    margin: 0 auto;
+  }
+}
+
+.field_with_errors {
+  width: 245px;
+  margin: 5px auto;
 }
