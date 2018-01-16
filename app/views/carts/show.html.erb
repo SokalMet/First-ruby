@@ -19,5 +19,7 @@
     </div>
     <%= button_to '', @cart, class: 'secrete empty_cart', form_class: 'button_to new-item', method: :delete %>
     <div class="btn btn-danger">Empty cart</div>
+    <%= button_to "Checkout", new_order_path, class: 'btn btn-success', method: :get %>
+
   </div>
 

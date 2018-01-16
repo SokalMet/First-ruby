@@ -252,3 +252,22 @@ input#user_email {
   width: 245px;
   margin: 5px auto;
 }
+
+.depot_form{
+  fieldset{
+    background-color: #EFEFEF;
+    legend{
+      color: #dff0d8;
+      background: #141;
+    }
+  }
+  form{
+    label{
+      float: left;
+      display: block;
+    }
+    br{
+      display: none;
+    }
+  }
+}
