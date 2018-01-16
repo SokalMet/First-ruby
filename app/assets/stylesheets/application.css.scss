@@ -45,21 +45,6 @@
   font-size: $font-size-lg;
 }
 
-.btn-google-plus {
-  max-width: 245px;
-  margin: 5px auto;
-  background-color: #DD4B65;
-  display: block;
-  font-size: 17px;
-  padding-left: 1px;
-  &:hover {
-    color: white !important;
-  }
-  i.fa {
-    padding: 0 12px;
-  }
-}
-
 img {
   border: 1px solid lightgrey;
 }
@@ -195,6 +180,12 @@ input#user_email {
   font: bold smaller sans-serif;
   width: 200px;
 
+}
+
+.store-description {
+  p {
+    margin: 0 auto;
+  }
 }
 
 .new_user {
