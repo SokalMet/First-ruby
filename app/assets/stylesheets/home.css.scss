@@ -133,6 +133,13 @@ a:hover {
   @include basket(asset-data-url('empty_cart44.png'))
 }
 
+.google-pic {
+  @include google-pic(asset-data-url('google.png'));
+  height: 50px;
+  width: 50px;
+  margin-left: 25px;
+}
+
 .basket1 {
   @include basket(asset-data-url('full_cart44.png'))
 }
