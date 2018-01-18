@@ -1,16 +1,16 @@
 <%= form_for(product, url: product_path, method: :patch) do |form| %>
-    <% if product.errors.any? %>
-        <div id="error_explanation">
-          <h4><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h4>
-          <ul>
-            <% product.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-    <table class="col-md-12">
-      <tbody>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h4>
+      <ul>
+        <% product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <table class="col-md-12">
+    <tbody>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td class="product-img edit">
           <%= image_tag(@product.image_url, class: 'list_image') %>
@@ -49,6 +49,6 @@
           </div>
         </td>
       </tr>
-      </tbody>
-    </table>
+    </tbody>
+  </table>
 <% end %>
