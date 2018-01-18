@@ -8,7 +8,7 @@
 </div>
 <table class="col-md-12">
   <% @products.each do |product| %>
-      <tbody>
+    <tbody>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td class="product-img">
           <%= image_tag(product.image_url, class: 'list_image') %>
@@ -27,6 +27,6 @@
           </div>
         </td>
       </tr>
-      </tbody>
+    </tbody>
   <% end %>
 </table>
