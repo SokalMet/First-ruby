@@ -30,7 +30,7 @@ gem 'will_paginate', '~> 3.1.0'                         # For pagination
 gem 'sendgrid-ruby'                                     # For emails sending
 gem 'sweetalert-rails'
 gem 'omniauth-google-oauth2', '~> 0.2.1'                # This gem allows to add Google authentication
-
+gem 'carrierwave', '~> 1.0'                             # Simple and extremely flexible way to upload files
 
 
 group :production do

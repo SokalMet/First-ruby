@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  require 'carrierwave/orm/activerecord'
+  mount_uploader :thumbnail, ThumbnailUploader
   has_many :line_items
   after_initialize :init
 
