@@ -1,7 +1,11 @@
 class Product < ActiveRecord::Base
   has_many :line_items
   has_many :orders, through: :line_items
+
   after_initialize :init
+
+  accepts_nested_attributes_for :line_items
+  accepts_nested_attributes_for :orders
 
   before_destroy :ensure_not_referenced_by_any_line_item
   validates :title, :length => { :minimum => 5, message: ': add 5 letters'}
