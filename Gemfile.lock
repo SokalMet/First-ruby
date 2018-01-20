@@ -426,7 +426,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.15, >= 2.15.1)
   capybara-email (~> 2.5.0)
-  carrierwave (~> 1.0)
+  carrierwave
   coffee-rails (~> 4.2)
   dalli (~> 2.7, >= 2.7.6)
   database_cleaner (~> 1.6, >= 1.6.1)
