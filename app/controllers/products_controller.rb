@@ -27,9 +27,6 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @uploader = ThumbnailUploader.new(params[:thumbnail])  # Check
-    @uploader.store!                                             # Check
-    @product.thumbnail = @uploader                               # Check
 
     respond_to do |format|
       if @product.save

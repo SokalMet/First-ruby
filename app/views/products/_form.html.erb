@@ -13,12 +13,9 @@
     <tbody>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td class="product-img edit">
-          <%= image_tag(@product.image_url, class: 'list_image') %>
-          <div>
-            <strong><%= form.label :image_url %>:</strong>
-            <span>
-                <%= form.text_field :image_url, id: :product_image_url %>
-              </span>
+          <%= image_tag(@product.thumbnail.url, class: 'list_image') %>
+          <div class="btn btn-primary upload-f">
+            <%= form.file_field :thumbnail %>
           </div>
         </td>
         <td class="list_description">
@@ -26,14 +23,14 @@
             <strong><%= form.label :title %></strong>
             <span>
                 <%= form.text_field :title, id: :product_title %>
-              </span>
+            </span>
           </div>
           <div class="product-description edit row">
             <strong><%= form.label :description %></strong>
             <span>
-                <%= form.text_area :description, id: :product_description, rows: 6 %>
+                <%= form.text_area :description, id: :product_description, rows: 7 %>
               </span>
-            <br/>
+
             <div class="price edit">
               <strong><%= form.label :price %></strong>
               <span>

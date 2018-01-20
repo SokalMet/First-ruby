@@ -1,10 +1,8 @@
 class Product < ActiveRecord::Base
   require 'carrierwave/orm/activerecord'
-  mount_uploader :thumbnail, ThumbnailUploader
-
   has_many :line_items
-  after_initialize :init
 
+  after_initialize :init
   before_destroy :ensure_not_referenced_by_any_line_item
   validates :title, :length => { :minimum => 5, message: ': add 5 letters'}
   validates :title, :description, presence: true
@@ -14,9 +12,11 @@ class Product < ActiveRecord::Base
       with: %r{\.(gif|jpg|png)\Z}i,
       message: 'URL should include formats: jpg, gif, png'
   }
+  mount_uploader :thumbnail, ThumbnailUploader
 
   def init
-    if self.image_url==""
+    image_not_found = self.image_url.blank?
+    if image_not_found
       self.image_url = 'ImageNotFound.png'
     end
   end

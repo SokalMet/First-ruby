@@ -2,13 +2,7 @@
   <tbody>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td class="product-img">
-      <%= image_tag(@product.image_url, class: 'list_image') %>
-      <div>
-        <strong>Image url:</strong>
-        <div>
-          <%= @product.image_url %>
-        </div>
-      </div>
+      <%= image_tag(@product.thumbnail.url, class: 'list_image') %>
     </td>
     <td class="list_description">
       <div class="product-title">

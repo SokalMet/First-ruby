@@ -249,6 +249,7 @@ ul.second-nav {
     }
     .entry {
       width: 48%;
+      height: 470px;
       padding: 5px;
       float: left;
       border: solid;
@@ -256,9 +257,17 @@ ul.second-nav {
       margin: 5px;
       border-radius: 2px;
       margin: 0 10px 35px;
+      .store-description{
+        text-align: left;
+      }
+      img{
+        width: auto;
+        height: 180px !important;
+      }
       p {
         width: 90%;
-        height: 111px;
+        height: 135px;
+        overflow-y: hidden;
       }
     }
   }

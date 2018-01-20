@@ -1,3 +1,17 @@
 .edit_product {
   margin: 5% 0 10%;
 }
+
+td.list_description {
+  height: 331px;
+}
+
+.upload-f {
+  width: 80%;
+}
+
+.price {
+  &.edit {
+    position: absolute;
+  }
+}
