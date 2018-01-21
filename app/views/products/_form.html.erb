@@ -13,7 +13,7 @@
     <tbody>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td class="product-img edit">
-          <%= image_tag(@product.thumbnail.url, class: 'list_image') %>
+          <%= image_tag(img_url(@product), class: 'list_image') %>
           <div class="btn btn-primary upload-f">
             <%= form.file_field :thumbnail %>
           </div>
