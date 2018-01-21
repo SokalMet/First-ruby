@@ -66,7 +66,7 @@ input#user_email {
   margin: auto;
   padding: 1em;
   background: white;
-  min-height: 600px;
+  min-height: 640px;
   h1 {
     a.btn-success {
       float: left;
@@ -86,7 +86,6 @@ input#user_email {
           height: auto;
           max-height: 190px;
         }
-
       }
       .product-img.edit {
         div {
@@ -97,7 +96,7 @@ input#user_email {
         font-size: 18px !important;
       }
       .list_description {
-        padding: 5px;
+        padding: 33px 6px;
         position: relative;
         .edit {
           text-align: left !important;
@@ -110,20 +109,6 @@ input#user_email {
             min-width: 80%;
             overflow: visible;
           }
-          //&.product-description,
-          //&.product-title,
-          //&.product-functions,
-          //&.price {
-          //  text-align: left !important;
-          //  strong {
-          //    position: relative;
-          //    left: 20px;
-          //  }
-          //  span {
-          //    position: relative;
-          //    left: 20%;
-          //  }
-          //}
         }
       }
       .product-title {
@@ -135,9 +120,6 @@ input#user_email {
         left: 20px;
         margin-bottom: 20px;
       }
-      .product-title.edit {
-      }
-
       .product-description {
         text-align: left;
         font-size: 1.5rem;
@@ -153,7 +135,6 @@ input#user_email {
       .price{
         text-align: left;
       }
-
       .product-functions {
         position: absolute;
         bottom: 10px;

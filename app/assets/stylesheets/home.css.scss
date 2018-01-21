@@ -135,9 +135,12 @@ a:hover {
 
 .google-pic {
   @include google-pic(asset-data-url('google.png'));
-  height: 50px;
-  width: 50px;
-  margin-left: 25px;
+  background-repeat: no-repeat;
+  height: 34px;
+  width: 190px;
+  margin: 3px;
+  background-position: 3%;
+  text-align: right;
 }
 
 .basket1 {

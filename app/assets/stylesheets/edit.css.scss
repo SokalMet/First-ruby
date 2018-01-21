@@ -1,17 +1,45 @@
 .edit_product {
-  margin: 5% 0 10%;
+  //margin: 5% 0 10%;
 }
 
-td.list_description {
-  height: 331px;
+table.new-product {
+  td {
+    position: initial;
+    height: 110px;
+    text-align: left;
+    &:first-child {
+      border-right: 1px solid #C6C6C6;
+    }
+    input, textarea {
+      width: 90%;
+      font-size: 14px;
+      &.update_product {
+        width: 50%;
+      }
+      &.product_thumbnail {
+      }
+    }
+    strong {
+      font-size: 20px;
+    }
+  }
 }
 
 .upload-f {
-  width: 80%;
+  //width: 910%;
+  text-align: left;
+  .file-input-field {
+    //position: relative;
+    top: -12px;
+    left: 125px;
+    #product_thumbnail {
+      text-align: left;
+    }
+  }
 }
 
 .price {
   &.edit {
-    position: absolute;
+    //position: absolute;
   }
 }
