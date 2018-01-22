@@ -140,6 +140,16 @@ input#user_email {
         right: 20px;
       }
     }
+
+    &.order-table-styles{
+      thead{
+        tr{
+          th{
+            text-align: center;
+          }
+        }
+      }
+    }
   }
   .paginate {
     padding-bottom: 11px;

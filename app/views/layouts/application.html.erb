@@ -28,9 +28,6 @@
             </li>
             <li><h4 class="phones"><span class="bold">(044) 000-00-00</span><br>(044) 000-00-00<br>0 800 000-000</h4>
             </li>
-            <li class="line-v"></li>
-            <li><a href="#"><h4>City<br><span class="hi-bold">Select your city</span></h4></a></li>
-            <li class="line-v"></li>
             <li>
               <form class="form-container">
                 <div class="form-group">
@@ -49,7 +46,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li style="float: right; padding-right: 20px">
               <%= link_to cart_path(current_cart), class: 'link-on-basket' do %>
                 <% if cart_empty? %>
                   <div class="basket"></div>
@@ -75,11 +72,16 @@
             <% end %>
             <li><%= link_to 'Store', store_path %></li>
             <li><a href="#">BLOG</a></li>
+            <% if user_signed_in? %>
+              <% if current_user.email === ENV['ADMIN_EMAIL'] %>
+                <li><%= link_to 'Orders', orders_path %></li>
+              <% end %>
+            <% end %>
           </ul>
           <div class="cabinet">
             <% if user_signed_in? %>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                  <i class="fa fa-user" aria-hidden="true"></i> Logout | <%= current_user.email %>
+                <i class="fa fa-user" aria-hidden="true"></i> Logout | <%= current_user.email %>
               <% end %>
             <% else %>
               <%= link_to new_user_session_path do %>
@@ -95,14 +97,14 @@
 
 <div class="wrapper clearfix">
   <div id="main">
-    <% flash.each do |name,msg| %>
-        <div class="alert_wrapper">
-          <div class="alert alert-dismissible" role= "alert">
-            <%= image_tag ('messagebox_info30.png') %>
-            <%= content_tag :span, msg , class: 'notice' %>
-            <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button>
-          </div>
+    <% flash.each do |name, msg| %>
+      <div class="alert_wrapper">
+        <div class="alert alert-dismissible" role="alert">
+          <%= image_tag ('messagebox_info30.png') %>
+          <%= content_tag :span, msg, class: 'notice' %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button>
         </div>
+      </div>
     <% end %>
     <%= yield %>
   </div>
