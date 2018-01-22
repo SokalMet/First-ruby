@@ -1,0 +1,70 @@
+# README
+
+== Welcome to the SOKALSHOP Book Store.
+
+I used the knowledge obtained from
+the `Agile Web Development` book, Code School lessons and stackoverflow.com.
+
+The application is built on:
+
+ * Ruby 2.4.2
+ * Rails 5.1.2
+ * postgresql
+ * Hosted by heroku, framework `Ruby, Graphviz, ImageMagick`, stack `heroku-16`
+ * Domain https://sokalshop.herokuapp.com/
+
+== How to Install (Mac)
+
+1. Install the latest version of XCode from the App store, run `$ xcode-select --install`
+2. Install `GIT`, `GPG`, `RVM`, `postgresql`, `RubyMine` (https://www.jetbrains.com/ruby/)
+3. CD to where you want to work on project in terminal and clone the git repo: `https://github.com/SokalMet/First-ruby.git`
+4. Configure gemset (https://rvm.io/)
+5. Configure RubyMine
+6. Install ImageMagick `brew install imagemagick` (https://www.imagemagick.org/script/index.php)
+7. Install bundler `$ gem install bundler`
+8. Run the commmand to bundle: `$ bundle`
+9. Create the DB `$ rails db:create`
+10. Run migrations `$ rails db:migrate`
+11. All is ready to start Web server `rails s`
+
+At this point you can point your browser to localhost:3000/ and start development work.
+To stop the server click CNTL-C in all three tabs.
+
+== How to run the test suite
+
+To check to make sure your code changes didn't break anything critical:
+
+ * $ rails db:test:prepare
+ * $ rspec spec
+
+Green dots are good, red F's are bad.
+
+== How it works
+
+The application works in three modes:
+
+1. User as a guest: can review books on a dashboard.
+
+2. Signed up User: can buy goods on the site.
+ * There are two ways to register: to complete the registration form or through the Google omniauth service
+ * An email is sent to confirm registration in both cases, User have to click a link in the email
+ * Forgotten passwords regain through emails too
+
+3. User as an administrator: can add new Books to the Store.
+ * Credentials to Log in as admin:
+
+        Login: sokalmet2018@gmail.com
+        Password: Benzopilin_1
+
+
+
+
+
+
+
+
+
+
+
+
+
