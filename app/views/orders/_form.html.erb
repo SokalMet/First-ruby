@@ -11,27 +11,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :order_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_area :address, id: :order_address, rows: 3, cols: 40 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email, id: :order_email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :pay_type %>
-    <%= form.select :pay_type, Order::PAYMENT_TYPES, id: :order_pay_type, prompt: 'Select a payment method' %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit 'Order' %>
-  </div>
+    <table class="col-md-12 new-template order ">
+      <tbody>
+      <tr>
+        <td class="col-md-2">
+          <strong><%= form.label :name %></strong>
+        </td>
+        <td class="col-md-7">
+          <%= form.text_field :name, id: :order_name %>
+        </td>
+        <td class="col-md-3">
+        </td>
+      </tr>
+      <tr>
+        <td class="col-md-2">
+          <strong><%= form.label :address %></strong>
+        </td>
+        <td class="col-md-7">
+          <%= form.text_area :address, id: :order_address, rows: 3, cols: 40 %>
+        </td>
+        <td class="col-md-3"></td>
+      </tr>
+      <tr>
+        <td class="col-md-2">
+          <strong><%= form.label :email %></strong>
+        </td>
+        <td class="file-input-field col-md-7">
+          <%= form.email_field :email, id: :order_email %>
+        </td>
+        <td class="col-md-3"></td>
+      </tr>
+      <tr>
+        <td class="col-md-2">
+          <strong><%= form.label :pay_type %></strong>
+        </td>
+        <td class="col-md-7">
+          <%= form.select :pay_type, Order::PAYMENT_TYPES, id: :order_pay_type, prompt: 'Select a payment method' %>
+        </td>
+        <td class="col-md-3">
+          <%= form.submit 'Order', class: 'btn btn-success' %> |
+          <%= link_to 'Back', cart_path(current_cart), class: 'btn btn-default' %>
+        </td>
+      </tr>
+      </tbody>
+    </table>
 <% end %>
