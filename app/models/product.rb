@@ -3,6 +3,7 @@ class Product < ActiveRecord::Base
   has_many :line_items
 
   after_initialize :init
+  before_save :prepare_description
   before_destroy :ensure_not_referenced_by_any_line_item
   validates :title, :length => { :minimum => 5, message: ': add 5 letters'}
   validates :title, :description, presence: true
@@ -33,4 +34,10 @@ end
 
 def self.latest
   Product.order(:updated_at).last
+end
+
+  private
+
+def prepare_description
+  self.description = ActionView::Base.full_sanitizer.sanitize(self.description).squish.delete("\n")
 end

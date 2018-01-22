@@ -1,4 +1,3 @@
-ActiveRecord::Base.connection.reset_pk_sequence!('products')
 Product.create(title: 'Web Design for Developers',
                description: "Web Design for Developers will show you how to make your web-based application look professionally designed. We'll help you learn how to pick the right colors and fonts, avoid costly interface and accessibility mistakes -- your application will really come alive. We'll also walk you through some common Photoshop and CSS techniques and work through a web site redesign, taking a new design from concept all the way to implementation.",
                image_url: '/assets/cs.jpg',
