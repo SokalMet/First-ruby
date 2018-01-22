@@ -30,8 +30,8 @@ gem 'will_paginate', '~> 3.1.0'                         # For pagination
 gem 'sendgrid-ruby'                                     # For emails sending
 gem 'sweetalert-rails'
 gem 'omniauth-google-oauth2', '~> 0.2.1'                # This gem allows to add Google authentication
-
-
+gem 'mini_magick'                                       # For resizing uploaded images
+gem 'carrierwave'                                       # Simple and extremely flexible way to upload files
 
 group :production do
   gem 'font_assets', '~> 0.1.14'                        # Let Cloudfront serve web fonts OK: http://kennethjiang.blogspot.com/2014/07/set-up-cors-in-cloudfront-for-custom.html

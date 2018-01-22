@@ -78,7 +78,7 @@ Rails.application.configure do
 
   ENV['WEBSITE_URL'] = 'localhost:3000'
   ENV['DOMAIN_URL'] = 'localhost:3000'
-  ENV['ADMIN_EMAIL'] = 'sokalmet@ukr.net'
+  ENV['ADMIN_EMAIL'] = 'sokalmet2018@gmail.com'
   ENV['GOOGLE_CLIENT_ID'] = '741215578572-e1ogd1kfqlfv3hantq295qp0dquv01ke.apps.googleusercontent.com'
   ENV['GOOGLE_CLIENT_SECRET'] = 'KOXCZBLcKpXSSswUU_z6WYBN'
 end

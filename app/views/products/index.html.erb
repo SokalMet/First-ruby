@@ -11,14 +11,14 @@
     <tbody>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td class="product-img">
-          <%= image_tag(product.image_url, class: 'list_image') %>
+          <%= image_tag(img_url(product), class: 'list_image') %>
         </td>
         <td class="list_description">
           <div class="product-title">
             <%= product.title %>
           </div>
           <div class="product-description">
-            <%= truncate(strip_tags(product.description), length: 80) %>
+            <%= strip_tags(product.description) %>
           </div>
           <div class="product-functions">
             <%= link_to 'Show', product, class: 'btn btn-default' %>&nbsp;|

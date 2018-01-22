@@ -50,6 +50,7 @@
   cursor: pointer;
 }
 
-@mixin google-pic($image){
+@mixin google-pic($image) {
   background-image: $image;
+  border-color: #C6C6C6;
 }

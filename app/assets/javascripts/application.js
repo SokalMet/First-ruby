@@ -28,7 +28,9 @@
 
 $(function() {
   $('.wrapper').easyOverlay('stop');
-  $('textarea').autoGrow();
+  $(document).on('click dblclick', 'textarea', function() {
+    $(this).autoGrow();
+  });
 
   $(document).on('click dblclick', '.btn-danger', function(e) {
     var $button = $(this);

@@ -1,8 +1,6 @@
 <h1>New Product</h1>
 
-<%#= render 'form', product: @product %>
-
-<div class="clearfix">
+<div class="clearfix new-product">
   <%= form_for(@product, url: products_path, method: :post) do |form| %>
     <% if @product.errors.any? %>
       <div id="error_explanation">
@@ -14,47 +12,49 @@
         </ul>
       </div>
     <% end %>
-  <table class="col-md-12">
-    <tbody>
-      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-        <td class="product-img edit">
-          <%= image_tag("", class: 'list_image') %>
-          <div>
-            <strong><%= form.label :image_url %>:</strong>
-            <span>
-              <%= form.text_field :image_url, id: :product_image_url %>
-            </span>
-          </div>
-        </td>
-        <td class="list_description">
-          <div class="product-title edit row">
+    <table class="col-md-12 new-product">
+      <tbody>
+        <tr>
+          <td class="col-md-1">
             <strong><%= form.label :title %></strong>
-            <span>
-              <%= form.text_field :title, id: :product_title %>
-            </span>
-          </div>
-          <div class="product-description edit row">
+          </td>
+          <td class="col-md-7">
+            <%= form.text_field :title, id: :product_title %>
+          </td>
+          <td class="col-md-4">
+          </td>
+        </tr>
+        <tr>
+          <td class="col-md-1">
             <strong><%= form.label :description %></strong>
-            <span>
-              <%= form.text_area :description, id: :product_description, rows: 6 %>
-            </span>
-            <br/>
-            <div class="price edit">
-              <strong><%= form.label :price %></strong>
-              <span>
-                <%= form.text_field :price, id: :product_price %>
-              </span>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div class="product-functions row">
+          </td>
+          <td class="col-md-7">
+            <%= form.text_area :description, id: :product_description, rows: 6 %>
+          </td>
+          <td class="col-md-4"></td>
+        </tr>
+        <tr>
+          <td class="col-md-1">
+            <strong>Upload file</strong>
+          </td>
+          <td class="file-input-field col-md-8">
+            <%= form.file_field :thumbnail %>
+          </td>
+          <td class="col-md-3"></td>
+        </tr>
+        <tr>
+          <td class="col-md-1">
+            <strong><%= form.label :price %></strong>
+          </td>
+          <td class="col-md-7">
+            <%= form.text_field :price, id: :product_price %>
+          </td>
+          <td class="col-md-4">
             <%= form.submit 'Create product', class: :'btn btn-success update_product' %> |
             <%= link_to 'Back', products_path, class: 'btn btn-default' %>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   <% end %>
 </div>
