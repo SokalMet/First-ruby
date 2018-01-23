@@ -53,3 +53,14 @@ table.new-template {
 input#product_title {
   width: 58%;
 }
+
+input.remote_url {
+  width: 97%;
+  font-size: medium;
+  color: grey;
+}
+
+input#product_thumbnail {
+  background-color: white;
+  border: 2px solid transparent;
+}

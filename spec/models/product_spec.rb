@@ -18,7 +18,6 @@ describe Product do
 
   context 'Callbacks' do
     it { expect(product).to callback(:prepare_description).before(:save) }
-    it { expect(product).to callback(:init).after(:initialize) }
     it { expect(product).to callback(:ensure_not_referenced_by_any_line_item).before(:destroy) }
   end
 end

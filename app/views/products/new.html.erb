@@ -39,6 +39,8 @@
           </td>
           <td class="file-input-field col-md-8">
             <%= form.file_field :thumbnail %>
+            <small>OR</small><br />
+            <%= form.text_field :image_url, class: 'remote_url',placeholder: 'Enter URL to an image' %>
           </td>
           <td class="col-md-3"></td>
         </tr>

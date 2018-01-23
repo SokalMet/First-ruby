@@ -14,9 +14,11 @@
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td class="product-img edit">
           <%= image_tag(img_url(@product), class: 'list_image') %>
-          <div class="btn btn-primary upload-f">
+          <div class="btn-primary upload-f">
             <%= form.file_field :thumbnail %>
           </div>
+          <small>OR enter URL to an image</small><br />
+          <%= form.text_field :image_url, class: 'remote_url' %>
         </td>
         <td class="list_description">
           <div class="product-title edit row">

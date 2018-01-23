@@ -3,7 +3,6 @@ class Product < ActiveRecord::Base
   has_many :line_items
   has_many :orders, through: :line_items
 
-  after_initialize :init
 
   accepts_nested_attributes_for :line_items
   accepts_nested_attributes_for :orders
@@ -20,12 +19,6 @@ class Product < ActiveRecord::Base
   }
   mount_uploader :thumbnail, ThumbnailUploader
 
-  def init
-    image_not_found = self.image_url.blank?
-    if image_not_found
-      self.image_url = 'ImageNotFound.png'
-    end
-  end
 
   def ensure_not_referenced_by_any_line_item
     if line_items.empty?
