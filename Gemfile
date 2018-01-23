@@ -64,6 +64,7 @@ end
 
 group :test do
   gem 'rspec-html-matchers'                             # For testing complex html output, useful for testing forms
+  gem 'rspec-collection_matchers'                       # Lets you express expected outcomes on collections of an object in an example
   gem 'rspec-rails', '~> 3.6.1'                         # rspec-rails is a testing framework for Rails 3+
   gem 'capybara-email', '~> 2.5.0'                      # Allows testing email messages that get sent out in test env
   gem 'selenium-webdriver', '~> 3.5', '>= 3.5.1'        # WebDriver is a tool for writing automated tests of websites.
