@@ -8,7 +8,7 @@ the `Agile Web Development` book, Code School lessons and stackoverflow.com.
 The application is built on:
 
  * Ruby 2.4.2
- * Rails 5.1.2
+ * Rails 5.1.4
  * postgresql
  * Hosted by heroku, framework `Ruby, Graphviz, ImageMagick`, stack `heroku-16`
  * Domain https://sokalshop.herokuapp.com/
@@ -16,11 +16,14 @@ The application is built on:
 == How to Install (Mac)
 
 1. Install the latest version of XCode from the App store, run `$ xcode-select --install`
-2. Install `GIT`, `GPG`, `RVM`, `postgresql`, `RubyMine` (https://www.jetbrains.com/ruby/)
+2. Install `GIT`, `GPG`, `RVM`, `postgresql`
 3. CD to where you want to work on project in terminal and clone the git repo: `https://github.com/SokalMet/First-ruby.git`
 4. Configure gemset (https://rvm.io/)
-5. Configure RubyMine
-6. Install ImageMagick `brew install imagemagick` (https://www.imagemagick.org/script/index.php)
+5. Install and configure `RubyMine` (https://www.jetbrains.com/ruby/)
+6. Install ImageMagick (https://www.imagemagick.org/script/index.php):
+ * xcode-select --install
+ * $ brew install imagemagick@6 && brew link imagemagick@6 --force
+
 7. Install bundler `$ gem install bundler`
 8. Run the commmand to bundle: `$ bundle`
 9. Create the DB `$ rails db:create`
@@ -39,7 +42,42 @@ To check to make sure your code changes didn't break anything critical:
 
 Green dots are good, red F's are bad.
 
+== How to deploy to Heroku
+
+There is detailed info (https://devcenter.heroku.com/articles/getting-started-with-rails5)
+If we've ran into problems (https://devcenter.heroku.com/articles/logging)
+
+1. Install Heroku Toolbelt, configure
+2. Commit app to github
+3. Create an app on Heroku
+ * $ heroku login
+ * $ heroku create
+
+4. Deploy the code to Heroku
+ * $ git push heroku master
+
+5. Migrate the DB on Heroku
+ * $ heroku run rake db:migrate --app sokalshop
+
+6. Check full working log
+ * $ heroku logs --tail
+
+7. Experimenting in our app’s environment
+ * $ heroku run rails console
+
+8. This app uses `ImageMagick` for picture *.img, *png preprocessing before save. The way to install it to Heroku's Ubuntu
+   is to install the bunch of buildpacks:
+ * https://github.com/heroku/heroku-buildpack-ruby
+ * https://github.com/weibeld/heroku-buildpack-graphviz.git
+ * https://github.com/ello/heroku-buildpack-imagemagick
+The useful way to install them - visit (https://dashboard.heroku.com/apps/sokalshop/settings) page and add them there
+
+9. This app uses several Heroku Config Vars to operate. All they are to be created on the same page after click
+   `Reveal Config Vars` button
+
 == How it works
+
+Visit page (https://sokalshop.herokuapp.com/)
 
 The application works in three modes:
 
@@ -55,6 +93,21 @@ The application works in three modes:
 
         Login: sokalmet2018@gmail.com
         Password: Benzopilin_1
+
+== Additional info
+
+Uploading pictures into Rails app: gem 'carrierwave' (https://github.com/carrierwaveuploader/carrierwave/wiki)
+Preprocessing before save: gem 'mini_magick' + ImageMagick tool. This is a ruby wrapper for ImageMagick command line.
+Images are stored into file system's `public` folder and are included to assets pipeline.
+
+Authentification: gem 'devise' + gem 'omniauth-google-oauth2' for quick Sign in through Google service.
+How tos:
+        https://launchschool.com/blog/how-to-use-devise-in-rails-for-authentication
+        https://github.com/zquestz/omniauth-google-oauth2
+
+Sending Email: through Google SMTP (smtp.gmail.com)
+how to:
+        https://www.lifewire.com/what-are-the-gmail-smtp-settings-1170854
 
 
 

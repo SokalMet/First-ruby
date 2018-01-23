@@ -24,7 +24,6 @@ gem 'autoprefixer-rails', '~> 7.1', '>= 7.1.2.6'        # Parse CSS and add vend
 gem 'bootstrap-select-rails', '~> 1.12', '>= 1.12.1'    # jQuery plugin that utilizes Bootstrap's dropdown.js to style.
 gem 'devise', '~> 4.3.0'                                # User authentication for users
 gem 'font-awesome-rails', '~> 4.7.0.2'                  # http://fontawesome.io/get-started/ for icons
-gem 'newrelic_rpm', '~> 4.3', '>= 4.3.0.335'            # Gem to support new relic application monitoring
 gem 'nokogiri', '~> 1.8'                                # HTML and XML Parser
 gem 'will_paginate', '~> 3.1.0'                         # For pagination
 gem 'sendgrid-ruby'                                     # For emails sending
