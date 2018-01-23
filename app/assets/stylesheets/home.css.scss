@@ -251,7 +251,6 @@ ul.second-nav {
     }
     .entry {
       width: 48%;
-      height: 470px;
       padding: 5px;
       float: left;
       border: solid;
@@ -261,6 +260,7 @@ ul.second-nav {
       margin: 0 10px 35px;
       .store-description{
         text-align: left;
+        height: 144px;
       }
       img{
         width: auto;
@@ -268,15 +268,17 @@ ul.second-nav {
       }
       p {
         width: 90%;
-        height: 135px;
-        overflow-y: hidden;
+        height: 100px;
       }
     }
   }
 }
 
-h3 {
-  font-weight: bold;
+.entry {
+  h3 {
+    font-weight: bold;
+    height: 52px;
+  }
 }
 
 .price {

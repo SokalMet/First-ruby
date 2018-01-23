@@ -7,10 +7,10 @@
   <% @products.each do |product| %>
     <div class="entry">
       <%= image_tag(img_url(product)) %>
-      <h3><%= product.title %></h3>
+      <h3><%= truncate(product.title, length: 75) %></h3>
       <div class="store-description">
         <p>
-          <%= sanitize(product.description) %>
+          <%= truncate(sanitize(product.description), length: 540) %>
         </p>
       </div>
       <div class="price_line">
