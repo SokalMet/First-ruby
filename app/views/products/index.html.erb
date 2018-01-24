@@ -6,14 +6,14 @@
   <%= will_paginate @products %><br />
   <%= page_entries_info @products %>
 </div>
-<table class="col-md-12">
+<table class="col-md-12 all-products">
   <% @products.each do |product| %>
     <tbody>
-      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+      <tr>
         <td class="product-img">
           <%= image_tag(img_url(product), class: 'list_image') %>
         </td>
-        <td class="list_description">
+        <td class="list_all">
           <div class="product-title">
             <%= product.title %>
           </div>

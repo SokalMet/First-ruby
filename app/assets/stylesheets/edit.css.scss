@@ -1,6 +1,4 @@
-.edit_product {
-  //margin: 5% 0 10%;
-}
+@import 'colors';
 
 table.new-template {
   td {
@@ -11,19 +9,16 @@ table.new-template {
       border-right: 1px solid #C6C6C6;
     }
     input, textarea {
-      width: 90%;
+      width: 100%;
       font-size: 14px;
       &.update_product {
         width: 50%;
-      }
-      &.product_thumbnail {
       }
     }
     strong {
       font-size: 20px;
     }
   }
-
   &.order{
     input.btn {
       width: 70%;
@@ -32,26 +27,13 @@ table.new-template {
 }
 
 .upload-f {
-  //width: 910%;
   text-align: left;
-  .file-input-field {
-    //position: relative;
-    top: -12px;
-    left: 125px;
-    #product_thumbnail {
-      text-align: left;
-    }
-  }
 }
 
-.price {
-  &.edit {
-    //position: absolute;
-  }
-}
-
-input#product_title {
-  width: 58%;
+input#product_thumbnail {
+  text-align: left;
+  background-color: white;
+  border: 2px solid transparent;
 }
 
 input.remote_url {
@@ -60,7 +42,75 @@ input.remote_url {
   color: grey;
 }
 
-input#product_thumbnail {
-  background-color: white;
-  border: 2px solid transparent;
+table {
+  tr {
+    border: 1px solid $mediumlightgrey;
+    .product-img {
+      border-right: solid;
+      border-width: 1px;
+      width: 200px;
+      height: 200px;
+      background-color: #e6e6e6;
+      div {
+        margin: 5px;
+        font-size: 18px !important;
+      }
+      img {
+        width: 140px;
+        height: auto;
+        max-height: 190px;
+      }
+    }
+    .list_description {
+      padding: 10px;
+      .product-title {
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 6px;
+        label {
+          min-width: 120px;
+          font-size: 140%;
+        }
+      }
+      #product-title {
+        input {
+          width: 100%;
+          font-size: 110%;
+          padding-left: 10px;
+        }
+      }
+      .product-description {
+        text-align: left;
+        font-weight: bold;
+        margin: 10px 0;
+        font-size: 140%;
+      }
+      #product-description {
+        textarea {
+          overflow: hidden;
+          width: 100%;
+        }
+      }
+      .price {
+        text-align: left;
+        font-size: 140%;
+        margin-top: 15px;
+      }
+      .price_field {
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+table.order-table-styles{
+  thead{
+    tr{
+      th{
+        text-align: center;
+      }
+    }
+  }
 }

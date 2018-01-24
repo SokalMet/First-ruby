@@ -3,7 +3,6 @@
 
 /* RESET */
 * {
-  padding: 0;
   box-sizing: border-box;
   font-size: 100%;
   text-decoration: none;
@@ -255,7 +254,6 @@ ul.second-nav {
       float: left;
       border: solid;
       border-width: 1px;
-      margin: 5px;
       border-radius: 2px;
       margin: 0 10px 35px;
       .store-description{
@@ -281,7 +279,24 @@ ul.second-nav {
   }
 }
 
-.price {
-  font-size: 150%;
+.all-products {
+  .list_all {
+    padding: 0 15px;
+    text-align: left;
+    .product-title {
+      font-size: 140%;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .product-description {
+      font-size: 110%;
+      margin-bottom: 15px;
+    }
+    .product-functions {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  }
 }
+
 

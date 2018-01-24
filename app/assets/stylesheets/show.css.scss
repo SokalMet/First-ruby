@@ -1,3 +1,31 @@
-.price {
-  padding-top: 5px;
+.show-container {
+  text-align: left;
+  padding-left: 10px;
+  .product-title {
+    margin-bottom: 15px;
+    strong {
+      font-size: 140%;
+      font-weight: bold;
+    }
+  }
+  .show-title {
+    font-size: 120%;
+  }
+  #product-description {
+    margin-bottom: 15px;
+    strong {
+      font-size: 140%;
+    }
+    .show-description {
+      font-size: 120%;
+    }
+  }
+  .price {
+    font-size: 140%;
+    margin-bottom: 15px;
+  }
+  .product-functions {
+    margin: 5px;
+    text-align: center;
+  }
 }

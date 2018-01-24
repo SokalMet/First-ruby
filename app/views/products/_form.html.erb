@@ -9,11 +9,11 @@
       </ul>
     </div>
   <% end %>
-  <table class="col-md-12">
+  <table class="col-md-12 edit_product">
     <tbody>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-        <td class="product-img edit">
-          <%= image_tag(img_url(@product), class: 'list_image') %>
+        <td class="product-img">
+          <%= image_tag(img_url(@product)) %>
           <div class="btn-primary upload-f">
             <%= form.file_field :thumbnail %>
           </div>
@@ -21,27 +21,24 @@
           <%= form.text_field :image_url, class: 'remote_url' %>
         </td>
         <td class="list_description">
-          <div class="product-title edit row">
+          <div class="product-title">
             <strong><%= form.label :title %></strong>
-            <span>
-                <%= form.text_field :title, id: :product_title %>
-            </span>
           </div>
-          <div class="product-description edit row">
+          <div id="product-title">
+            <%= form.text_field :title %>
+          </div>
+          <div class="product-description">
             <strong><%= form.label :description %></strong>
-            <span>
-                <%= form.text_area :description, id: :product_description, rows: 7 %>
-              </span>
-
-            <div class="price edit">
-              <strong><%= form.label :price %></strong>
-              <span>
-                  <%= form.text_field :price, id: :product_price %>
-                </span>
-            </div>
           </div>
-        </td>
-        <td>
+          <div id="product-description">
+            <%= form.text_area :description, id: :product_description, rows: 7 %>
+          </div>
+          <div class="price">
+            <strong><%= form.label :price %></strong>
+          </div>
+          <div class="price_field">
+            <%= form.text_field :price, id: :product_price %>
+          </div><br />
           <div class="product-functions row">
             <%= form.submit 'Save changes', class: :'btn btn-success update_product' %> |
             <%= link_to 'Back', products_path, class: 'btn btn-default' %>
