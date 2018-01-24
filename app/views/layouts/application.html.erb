@@ -22,38 +22,39 @@
           <ul class="nav navbar-nav second-nav">
             <li><a href="/">
               <h1 class="logo">SOKALSHOP</h1>
-              <p class="p-logo">Internet-Store</p></a></li>
-            <li>
-              <div class="glyphicon glyphicon-earphone"></div>
-            </li>
-            <li><h4 class="phones"><span class="bold">(044) 000-00-00</span><br>(044) 000-00-00<br>0 800 000-000</h4>
-            </li>
-            <li>
-              <form class="form-container">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="poshuk" placeholder="Find by name">
-                </div>
-              </form>
-            </li>
-            <li>
-              <div class="dropdown">
-                <div class="dropdown-toggle" data-toggle="dropdown">Filter by
-                  <span class="glyphicon glyphicon-chevron-down"></span>
-                </div>
-                <ul class="dropdown-menu">
-                  <li><a href="#">By name</a></li>
-                  <li><a href="#">By price</a></li>
-                </ul>
-              </div>
+              <p class="p-logo">Internet-Store</p></a>
             </li>
             <li style="float: right; padding-right: 10%">
               <%= link_to cart_path(current_cart), class: 'link-on-basket' do %>
-                <% if cart_empty? %>
-                  <div class="basket"></div>
-                <% else %>
-                  <div class="basket1"></div>
-                <% end %>
+                  <% if cart_empty? %>
+                      <div class="basket"></div>
+                  <% else %>
+                      <div class="basket1"></div>
+                  <% end %>
               <% end %>
+            </li>
+            <!--can add some filtering in the future-->
+            <!--<li>-->
+              <!--<form class="form-container">-->
+                <!--<div class="form-group">-->
+                  <!--<input type="text" class="form-control" id="poshuk" placeholder="Find by name">-->
+                <!--</div>-->
+              <!--</form>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<div class="dropdown">-->
+                <!--<div class="dropdown-toggle" data-toggle="dropdown">Filter by-->
+                  <!--<span class="glyphicon glyphicon-chevron-down"></span>-->
+                <!--</div>-->
+                <!--<ul class="dropdown-menu">-->
+                  <!--<li><a href="#">By name</a></li>-->
+                  <!--<li><a href="#">By price</a></li>-->
+                <!--</ul>-->
+              <!--</div>-->
+            <!--</li>-->
+            <li style="float: right; padding-right: 10%">
+              <span class="glyphicon glyphicon-earphone"></span>
+              <span class="bold">(044) 000-00-00</span>
             </li>
           </ul>
         </div>
