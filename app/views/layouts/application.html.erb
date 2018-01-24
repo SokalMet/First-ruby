@@ -71,7 +71,7 @@
               <% end %>
             <% end %>
             <li><%= link_to 'Store', store_path %></li>
-            <li><a href="#">BLOG</a></li>
+            <li><a href="#">Blog</a></li>
             <% if user_signed_in? %>
               <% if current_user.email === ENV['ADMIN_EMAIL'] %>
                 <li><%= link_to 'Orders', orders_path %></li>
@@ -126,7 +126,7 @@
         <div class="block-f">
           <h3>COMPANY</h3>
           <ul>
-            <li><a href="#">BLOG</a></li>
+            <li><a href="#">Blog</a></li>
             <li><a href="#">About us</a></li>
           </ul>
         </div>
