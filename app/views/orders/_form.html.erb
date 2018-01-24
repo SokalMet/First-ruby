@@ -51,26 +51,28 @@
         <td class="col-md-3">
         </td>
       </tr>
-      <tr>
-        <td class="col-md-2">
-          <strong>Selected products</strong>
-        </td>
-        <td class="col-md-7">
-          <% current_cart.line_items.each do |item| %>
-            <div>
-              <%= item.quantity %>&nbsp;&times;&nbsp;
-              <%= item.product.title %>&nbsp;&nbsp;&nbsp;
-              <span class="priceLine">
-                <%= number_to_currency(item.total_price) %>
-              </span>
-            </div>
-          <% end %>
-        </td>
-        <td class="col-md-3">
-          <%= form.submit 'Order', class: 'btn btn-success' %> |
-          <%= link_to 'Back', cart_path(current_cart), class: 'btn btn-default' %>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+      <% if current_cart.line_items.any? %>
+        <tr>
+          <td class="col-md-2">
+            <strong>Selected products</strong>
+          </td>
+          <td class="col-md-7">
+            <% current_cart.line_items.each do |item| %>
+              <div>
+                <%= item.quantity %>&nbsp;&times;&nbsp;
+                <%= item.product.title %>&nbsp;&nbsp;&nbsp;
+                <span class="priceLine">
+                  <%= number_to_currency(item.total_price) %>
+                </span>
+              </div>
+            <% end %>
+          </td>
+          <td class="col-md-3">
+            <%= form.submit 'Order', class: 'btn btn-success' %> |
+            <%= link_to 'Back', cart_path(current_cart), class: 'btn btn-default' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% end %>
