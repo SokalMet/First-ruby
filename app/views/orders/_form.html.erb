@@ -49,6 +49,24 @@
           <%= form.select :pay_type, Order::PAYMENT_TYPES, id: :order_pay_type, prompt: 'Select a payment method' %>
         </td>
         <td class="col-md-3">
+        </td>
+      </tr>
+      <tr>
+        <td class="col-md-2">
+          <strong>Selected products</strong>
+        </td>
+        <td class="col-md-7">
+          <% current_cart.line_items.each do |item| %>
+            <div>
+              <%= item.quantity %>&nbsp;&times;&nbsp;
+              <%= item.product.title %>&nbsp;&nbsp;&nbsp;
+              <span class="priceLine">
+                <%= number_to_currency(item.total_price) %>
+              </span>
+            </div>
+          <% end %>
+        </td>
+        <td class="col-md-3">
           <%= form.submit 'Order', class: 'btn btn-success' %> |
           <%= link_to 'Back', cart_path(current_cart), class: 'btn btn-default' %>
         </td>
