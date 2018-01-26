@@ -135,10 +135,9 @@ a:hover {
   @include google-pic(asset-data-url('google.png'));
   background-repeat: no-repeat;
   height: 34px;
-  width: 190px;
+  width: 246px;
   margin: 3px;
-  background-position: 3%;
-  text-align: right;
+  background-position: 6%;
 }
 
 .basket1 {
@@ -278,6 +277,19 @@ ul.second-nav {
     font-weight: bold;
     height: 52px;
   }
+}
+
+.field {
+  width: 246px;
+  text-align: center;
+  margin: 1px auto;
+  input {
+    width: 100%;
+  }
+}
+
+.rememberable {
+  margin-top: 15px;
 }
 
 .all-products {
