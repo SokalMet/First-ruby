@@ -1,6 +1,8 @@
+# Use https://everydayrails.com/2012/04/07/testing-series-rspec-controllers.html
+
 require 'rails_helper'
 
-describe ProductsController, :type => :controller do
+describe ProductsController, type: :controller do
   let(:product) { FactoryGirl.create(:product) }
 
   describe 'GET index' do

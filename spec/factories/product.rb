@@ -1,3 +1,5 @@
+# Use https://semaphoreci.com/community/tutorials/working-effectively-with-data-factories-using-factorygirl
+
 FactoryGirl.define do
   factory :product do
     title { Faker::Lorem.characters(8) }
