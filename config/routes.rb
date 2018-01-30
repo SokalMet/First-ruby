@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'blog/index'
+
   resources :orders
   devise_for :users, :controllers => {
       :sessions => 'users/sessions',
@@ -14,5 +16,12 @@ Rails.application.routes.draw do
   root to: 'store#index', as: 'store'
   resources :products do
     get :who_bought, on: :member
+  end
+  resources :conversations, only: [:create] do
+    member do
+      post :close
+    end
+
+    resources :messages, only: [:create]
   end
 end

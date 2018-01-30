@@ -7,6 +7,9 @@ class User < ApplicationRecord
   has_one :cart, dependent: :destroy
   before_save :downcase_email!
 
+  has_many :messages
+  has_many :conversations, foreign_key: :sender_id
+
   def cart_empty?
     Cart.where(user_id: current_user.id).line_items.empty?
   end
