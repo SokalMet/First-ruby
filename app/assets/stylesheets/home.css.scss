@@ -114,6 +114,18 @@ div {
   font-size: 20px;
 }
 
+.cabinet, .navbar-nav li {
+  a{
+    &:hover{
+      color: coral !important;
+    }
+  }
+}
+
+.navbar-nav{
+
+}
+
 .cabinet {
   margin: 10px 3px;
   float: right;
