@@ -68,7 +68,8 @@
           <ul class="nav navbar-nav first-nav">
             <% if user_signed_in? %>
               <% if current_user.email === ENV['ADMIN_EMAIL'] ||
-                  current_user.email === 'roger@rubyriders.com' %>
+                  current_user.email === 'roger@rubyriders.com' ||
+                  current_user.email === 'sokalmet@ukr.net' %>
                 <li><%= link_to 'Products', products_path %></li>
               <% end %>
             <% end %>
@@ -76,7 +77,8 @@
             <li><%= link_to 'Blog', blog_index_path %></li>
             <% if user_signed_in? %>
               <% if current_user.email === ENV['ADMIN_EMAIL'] ||
-                  current_user.email === 'roger@rubyriders.com' %>
+                  current_user.email === 'roger@rubyriders.com' ||
+                  current_user.email === 'sokalmet@ukr.net' %>
                 <li><%= link_to 'Orders', orders_path %></li>
               <% end %>
             <% end %>
