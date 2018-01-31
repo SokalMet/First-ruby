@@ -18,7 +18,6 @@ gem 'wicked_pdf', '~> 1.1'
 gem 'jquery-rails', '~> 4.3.1'                          # JQuery
 gem 'jquery-ui-rails', '~> 6.0.1'                       # JQuery UI
 gem 'coffee-rails', '~> 4.2'                            # Use CoffeeScript for .coffee assets and views
-gem 'turbolinks', '~> 5'                                # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'jbuilder', '~> 2.5'                                # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'autoprefixer-rails', '~> 7.1', '>= 7.1.2.6'        # Parse CSS and add vendor prefixes to CSS rules
 gem 'bootstrap-select-rails', '~> 1.12', '>= 1.12.1'    # jQuery plugin that utilizes Bootstrap's dropdown.js to style.

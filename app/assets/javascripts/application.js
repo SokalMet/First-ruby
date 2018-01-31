@@ -13,7 +13,6 @@
 //= require jquery
 //= require rails-ujs
 //= require bootstrap.min
-//= require turbolinks
 //= require jquery-ui
 //= require underscore_settings
 //= require underscore-min
