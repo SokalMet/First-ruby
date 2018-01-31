@@ -33,7 +33,6 @@ gem 'carrierwave'                                       # Simple and extremely f
 gem 'carrierwave-i18n'                                  # Provides additional locales for CarrierWave
 gem 'spring-watcher-listen', '~> 2.0.0'
 gem 'listen', '~> 3.1.5'
-gem 'redis'
 
 group :production do
   gem 'font_assets', '~> 0.1.14'                        # Let Cloudfront serve web fonts OK: http://kennethjiang.blogspot.com/2014/07/set-up-cors-in-cloudfront-for-custom.html
