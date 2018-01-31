@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require rails-ujs
-//= require bootstrap.min
+//= require jquery_ujs
 //= require jquery-ui
+//= require bootstrap.min
 //= require underscore_settings
 //= require underscore-min
 //= require jquery.easy-overlay
@@ -24,7 +24,6 @@
 //= require sweetalert2.min
 //= require alert
 //= require jquery.easy-overlay
-//= require jquery_ujs
 //= require_tree .
 
 $(function() {
