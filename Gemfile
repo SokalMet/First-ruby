@@ -31,6 +31,8 @@ gem 'omniauth-google-oauth2', '~> 0.2.1'                # This gem allows to add
 gem 'mini_magick'                                       # For resizing uploaded images
 gem 'carrierwave'                                       # Simple and extremely flexible way to upload files
 gem 'carrierwave-i18n'                                  # Provides additional locales for CarrierWave
+gem 'spring-watcher-listen', '~> 2.0.0'
+gem 'listen', '~> 3.1.5'
 
 group :production do
   gem 'font_assets', '~> 0.1.14'                        # Let Cloudfront serve web fonts OK: http://kennethjiang.blogspot.com/2014/07/set-up-cors-in-cloudfront-for-custom.html
@@ -46,9 +48,9 @@ group :development do
   gem 'guard-rspec', '~> 4.7.3'                         # To config/run rspec features automatically with guard
   gem 'traceroute', '~> 0.5.0'                          # Allows for easy searching of unused routes - "$ rake traceroute"
   gem 'spring'                                          # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring-watcher-listen', '~> 2.0.0'
+
   gem 'web-console', '~> 3.5.1'                         # Access an IRB console on exceptions page/console
-  gem 'listen', '~> 3.1.5'
+
 end
 
 group :development, :test do
