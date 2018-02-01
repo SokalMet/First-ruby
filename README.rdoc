@@ -88,10 +88,10 @@ The application works in three modes:
  * An email is sent to confirm registration in both cases, User have to click a link in the email
  * Forgotten passwords regain through emails too
 
-3. User as an administrator: can add new Books to the Store.
+3. User as an administrator: can add new Books to the Store, can check orders and change all elements.
  * Credentials to Log in as admin:
 
-        Login: sokalmet2018@gmail.com
+        Login: sokalmet@ukr.net
         Password: Benzopilin_1
 
 == Additional info
